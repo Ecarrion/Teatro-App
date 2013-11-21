@@ -40,6 +40,10 @@
 		267ADA731839D5330053D94C /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 267ADA721839D5330053D94C /* Weather.m */; };
 		267ADA781839D90A0053D94C /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 267ADA761839D90A0053D94C /* LandingViewController.m */; };
 		267ADA791839D90A0053D94C /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267ADA771839D90A0053D94C /* LandingViewController.xib */; };
+		26A20662183C757B00568A67 /* bridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A2065E183C757B00568A67 /* bridge.png */; };
+		26A20663183C757B00568A67 /* bridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A2065F183C757B00568A67 /* bridge@2x.png */; };
+		26A20664183C757B00568A67 /* gray-burry.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A20660183C757B00568A67 /* gray-burry.png */; };
+		26A20665183C757B00568A67 /* gray-burry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A20661183C757B00568A67 /* gray-burry@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,10 @@
 		267ADA751839D90A0053D94C /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
 		267ADA761839D90A0053D94C /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		267ADA771839D90A0053D94C /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		26A2065E183C757B00568A67 /* bridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bridge.png; sourceTree = "<group>"; };
+		26A2065F183C757B00568A67 /* bridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bridge@2x.png"; sourceTree = "<group>"; };
+		26A20660183C757B00568A67 /* gray-burry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-burry.png"; sourceTree = "<group>"; };
+		26A20661183C757B00568A67 /* gray-burry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-burry@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +225,7 @@
 				267ADA381839C4130053D94C /* LockscreenViewController.xib */,
 				267ADA741839D8ED0053D94C /* Landing */,
 				267ADA701839D4F70053D94C /* Models */,
+				26A2065C183C757B00568A67 /* Assets */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -297,6 +306,25 @@
 			path = Landing;
 			sourceTree = "<group>";
 		};
+		26A2065C183C757B00568A67 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				26A2065D183C757B00568A67 /* Common */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		26A2065D183C757B00568A67 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				26A2065E183C757B00568A67 /* bridge.png */,
+				26A2065F183C757B00568A67 /* bridge@2x.png */,
+				26A20660183C757B00568A67 /* gray-burry.png */,
+				26A20661183C757B00568A67 /* gray-burry@2x.png */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,8 +400,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A20664183C757B00568A67 /* gray-burry.png in Resources */,
 				267ADA3A1839C4130053D94C /* LockscreenViewController.xib in Resources */,
+				26A20665183C757B00568A67 /* gray-burry@2x.png in Resources */,
+				26A20662183C757B00568A67 /* bridge.png in Resources */,
 				267ADA111839BF460053D94C /* InfoPlist.strings in Resources */,
+				26A20663183C757B00568A67 /* bridge@2x.png in Resources */,
 				267ADA791839D90A0053D94C /* LandingViewController.xib in Resources */,
 				267ADA191839BF460053D94C /* Images.xcassets in Resources */,
 			);
@@ -617,6 +649,7 @@
 				267ADA311839BF460053D94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		267ADA321839BF460053D94C /* Build configuration list for PBXNativeTarget "Hotel AppTests" */ = {
 			isa = XCConfigurationList;
@@ -625,6 +658,7 @@
 				267ADA341839BF460053D94C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
