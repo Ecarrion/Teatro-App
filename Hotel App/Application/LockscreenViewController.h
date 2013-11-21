@@ -12,6 +12,8 @@
     
     __weak IBOutlet UILabel *clockLabel;
     __weak IBOutlet UILabel *tempLabel;
+    __weak IBOutlet UILabel *dateLabel;
+    
     
 }
 

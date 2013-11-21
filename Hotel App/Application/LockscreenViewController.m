@@ -13,6 +13,7 @@
     
     NSDateFormatter * clockFormater;
     NSTimer * clockTimer;
+    NSDateFormatter * dateFormatter;
 }
 
 @end
@@ -72,8 +73,19 @@
 
 -(void)updateTimer {
     
+    //Clock
     NSString * dateStr = [clockFormater stringFromDate:[NSDate date]];
     clockLabel.text = dateStr;
+    
+    
+    //Date
+    if (!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"EEEE MMMM d',' yyyy"];
+    }
+    
+    dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
+    
 }
 
 -(void)updateWeather {
@@ -107,6 +119,7 @@
     if (![self isViewLoaded]) {
         
         //Clean outlets here
+        dateFormatter = nil;
     }
     
     //Clean rest of resources here eg:arrays, maps, dictionaries, etc
