@@ -20,7 +20,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     LandingViewController * landing = [[LandingViewController alloc] init];
-    self.window.rootViewController = landing;
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:landing];
+    [nav setNavigationBarHidden:YES];
+    
+    UIImageView * imgv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default-Landscape.png"]];
+    [nav.view addSubview:imgv];
+    [nav.view sendSubviewToBack:imgv];
+    
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
     LockscreenViewController * lvc = [[LockscreenViewController alloc] init];

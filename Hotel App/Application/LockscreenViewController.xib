@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="clockLabel" destination="ckS-RV-OA7" id="ecE-di-pjw"/>
                 <outlet property="dateLabel" destination="6Nn-pu-5hK" id="6dA-2E-BPs"/>
+                <outlet property="landingSlider" destination="Ui8-59-Ihv" id="R9F-t3-tMW"/>
                 <outlet property="tempLabel" destination="oa7-CX-fWi" id="mhH-fh-IFm"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
@@ -47,15 +48,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GiX-2X-Fjj">
-                    <rect key="frame" x="435" y="611" width="155" height="62"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="To Landing"/>
-                    <connections>
-                        <action selector="toLandingPressed:" destination="-1" eventType="touchUpInside" id="Kd6-5n-Qwz"/>
-                    </connections>
-                </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Aimer • New York City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UQB-QN-Tlj">
                     <rect key="frame" x="400" y="212" width="224" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -71,6 +63,13 @@
                     <rect key="frame" x="292" y="369" width="441" height="1"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" id="Ui8-59-Ihv">
+                    <rect key="frame" x="332" y="588" width="361" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="NC4-oV-IxK"/>
+                    </connections>
+                </slider>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

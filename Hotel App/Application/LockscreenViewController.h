@@ -14,6 +14,7 @@
     __weak IBOutlet UILabel *tempLabel;
     __weak IBOutlet UILabel *dateLabel;
     
+    __weak IBOutlet UISlider *landingSlider;
     
 }
 

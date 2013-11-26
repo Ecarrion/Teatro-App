@@ -7,6 +7,7 @@
 //
 
 #import "LockscreenViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "Weather.h"
 
 @interface LockscreenViewController () {
@@ -40,6 +41,20 @@
     [clockFormater setDateFormat:@"H:mm"];
     
     tempLabel.text = @"";
+    
+    //Style clock label
+    clockLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
+    clockLabel.layer.shadowRadius = 2.f;
+    clockLabel.layer.shadowOpacity = .4;
+    clockLabel.layer.shadowOffset = CGSizeZero;
+    clockLabel.layer.masksToBounds = NO;
+    
+    //Style temp label
+    tempLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
+    tempLabel.layer.shadowRadius = 2.f;
+    tempLabel.layer.shadowOpacity = .4;
+    tempLabel.layer.shadowOffset = CGSizeZero;
+    tempLabel.layer.masksToBounds = NO;
     
     [self updateTimer];
     [self updateWeather];
@@ -93,7 +108,7 @@
     [Weather currentWeatherForLat:17.3820420 long:78.48172729999999 OnCompletion:^(Weather *weatherInfo) {
         
         if (weatherInfo) {
-            tempLabel.text = [NSString stringWithFormat:@"%@ º", weatherInfo.temperature];
+            tempLabel.text = [NSString stringWithFormat:@"%@ °", weatherInfo.temperature];
         }
         
     }];
@@ -102,6 +117,19 @@
 - (IBAction)toLandingPressed:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)sliderChanged:(id)sender {
+    
+    if (landingSlider.value < 1) {
+        
+        [landingSlider setValue:0 animated:YES];
+        
+    } else {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 
