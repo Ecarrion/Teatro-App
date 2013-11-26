@@ -44,7 +44,7 @@
     if (!self.window.rootViewController.presentedViewController) {
         
         LockscreenViewController * lvc = [[LockscreenViewController alloc] init];
-        [self.window.rootViewController presentViewController:lvc animated:NO completion:nil];
+        [self.window.rootViewController presentViewController:lvc animated:YES completion:nil];
     }
 }
 

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LandingViewController : UIViewController
+@interface LandingViewController : UIViewController {
+    
+    __weak IBOutlet UILabel *clockLabel;
+    __weak IBOutlet UILabel *weatherLabel;
+    
+    
+}
 
 @end
