@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2642A9841848580100A830EE /* horizontal-blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9801848580100A830EE /* horizontal-blur.png */; };
+		2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9811848580100A830EE /* horizontal-blur@2x.png */; };
+		2642A9861848580100A830EE /* clock-date-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9821848580100A830EE /* clock-date-background.png */; };
+		2642A9871848580100A830EE /* clock-date-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9831848580100A830EE /* clock-date-background@2x.png */; };
+		2642A98A18485AEE00A830EE /* buttons-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A98818485AEE00A830EE /* buttons-background.png */; };
+		2642A98B18485AEE00A830EE /* buttons-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A98918485AEE00A830EE /* buttons-background@2x.png */; };
 		267ADA071839BF460053D94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267ADA061839BF460053D94C /* Foundation.framework */; };
 		267ADA091839BF460053D94C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267ADA081839BF460053D94C /* CoreGraphics.framework */; };
 		267ADA0B1839BF460053D94C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267ADA0A1839BF460053D94C /* UIKit.framework */; };
@@ -60,6 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2642A9801848580100A830EE /* horizontal-blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-blur.png"; sourceTree = "<group>"; };
+		2642A9811848580100A830EE /* horizontal-blur@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-blur@2x.png"; sourceTree = "<group>"; };
+		2642A9821848580100A830EE /* clock-date-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-date-background.png"; sourceTree = "<group>"; };
+		2642A9831848580100A830EE /* clock-date-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-date-background@2x.png"; sourceTree = "<group>"; };
+		2642A98818485AEE00A830EE /* buttons-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttons-background.png"; sourceTree = "<group>"; };
+		2642A98918485AEE00A830EE /* buttons-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttons-background@2x.png"; sourceTree = "<group>"; };
 		267ADA031839BF460053D94C /* Hotel App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotel App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		267ADA061839BF460053D94C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		267ADA081839BF460053D94C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -325,6 +337,12 @@
 		26A2065D183C757B00568A67 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2642A98818485AEE00A830EE /* buttons-background.png */,
+				2642A98918485AEE00A830EE /* buttons-background@2x.png */,
+				2642A9801848580100A830EE /* horizontal-blur.png */,
+				2642A9811848580100A830EE /* horizontal-blur@2x.png */,
+				2642A9821848580100A830EE /* clock-date-background.png */,
+				2642A9831848580100A830EE /* clock-date-background@2x.png */,
 				268EB673183D973D009AD9BB /* separator.png */,
 				268EB674183D973D009AD9BB /* separator@2x.png */,
 				26A2065E183C757B00568A67 /* Default-Landscape.png */,
@@ -412,13 +430,19 @@
 			files = (
 				268EB675183D973D009AD9BB /* separator.png in Resources */,
 				26A20664183C757B00568A67 /* gray-burry.png in Resources */,
+				2642A98B18485AEE00A830EE /* buttons-background@2x.png in Resources */,
+				2642A98A18485AEE00A830EE /* buttons-background.png in Resources */,
 				267ADA3A1839C4130053D94C /* LockscreenViewController.xib in Resources */,
+				2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */,
 				26A20665183C757B00568A67 /* gray-burry@2x.png in Resources */,
+				2642A9871848580100A830EE /* clock-date-background@2x.png in Resources */,
 				268EB676183D973D009AD9BB /* separator@2x.png in Resources */,
 				26A20662183C757B00568A67 /* Default-Landscape.png in Resources */,
 				267ADA111839BF460053D94C /* InfoPlist.strings in Resources */,
 				26A20663183C757B00568A67 /* Default-Landscape@2x.png in Resources */,
 				267ADA791839D90A0053D94C /* LandingViewController.xib in Resources */,
+				2642A9861848580100A830EE /* clock-date-background.png in Resources */,
+				2642A9841848580100A830EE /* horizontal-blur.png in Resources */,
 				267ADA191839BF460053D94C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

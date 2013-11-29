@@ -33,6 +33,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self.buttonsArray enumerateObjectsUsingBlock:^(UIButton * but, NSUInteger idx, BOOL *stop) {
+        
+        but.titleLabel.numberOfLines = 0;
+        but.titleLabel.textAlignment = NSTextAlignmentCenter;
+    }];
+    
     clockFormater = [[NSDateFormatter alloc] init];
     [clockFormater setDateFormat:@"H:mm"];
     
@@ -79,7 +85,7 @@
     [Weather currentWeatherForLat:17.3820420 long:78.48172729999999 OnCompletion:^(Weather *weatherInfo) {
         
         if (weatherInfo) {
-            weatherLabel.text = [NSString stringWithFormat:@"%@ °", weatherInfo.temperature];
+            weatherLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature];
         }
         
     }];

@@ -16,4 +16,7 @@
     
 }
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsArray;
+
+
 @end
