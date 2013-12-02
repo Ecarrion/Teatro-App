@@ -102,19 +102,30 @@
     if (buttonContainer.frame.origin.x == BUTTONS_CONTAINER_RECT_BIG.origin.x) {
         
         [UIView animateWithDuration:0.3 animations:^{
+            
             buttonContainer.frame = BUTTONS_CONTAINER_RECT_SMALL;
-            description2.alpha = 1;
             buttonContainer.alpha = 0.5;
             buttonContainer.userInteractionEnabled = NO;
+            
+            toggleButton.frame = TOGGLE_BUTTON_RECT_CLOSE;
+            
+            description2.alpha = 1;
+            
+            
         } completion:nil];
         
     } else {
         
         [UIView animateWithDuration:0.3 animations:^{
+            
             buttonContainer.frame = BUTTONS_CONTAINER_RECT_BIG;
-            description2.alpha = 0;
             buttonContainer.alpha = 1;
             buttonContainer.userInteractionEnabled = YES;
+            
+            toggleButton.frame = TOGGLE_BUTTON_RECT_OPEN;
+            
+            description2.alpha = 0;
+            
         } completion:nil];
     }
 }

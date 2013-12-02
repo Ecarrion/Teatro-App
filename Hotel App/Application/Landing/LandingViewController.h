@@ -14,6 +14,7 @@
     __weak IBOutlet UILabel *weatherLabel;
     __weak IBOutlet UIView *buttonContainer;
     __weak IBOutlet UILabel *description2;
+    __weak IBOutlet UIButton *toggleButton;
     
     
 }
