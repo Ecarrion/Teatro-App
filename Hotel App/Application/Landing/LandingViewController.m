@@ -9,6 +9,9 @@
 #import "LandingViewController.h"
 #import "Weather.h"
 
+#define BUTTONS_CONTAINER_RECT_BIG CGRectMake(346, 187, 678, 393)
+#define BUTTONS_CONTAINER_RECT_SMALL CGRectMake(683, 187, 678, 393)
+
 @interface LandingViewController () {
     
     NSDateFormatter * clockFormater;
@@ -89,6 +92,24 @@
         }
         
     }];
+}
+
+- (IBAction)toggleDescription:(id)sender {
+    
+    if (buttonContainer.frame.origin.x == BUTTONS_CONTAINER_RECT_BIG.origin.x) {
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            buttonContainer.frame = BUTTONS_CONTAINER_RECT_SMALL;
+            description2.alpha = 1;
+        } completion:nil];
+        
+    } else {
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            buttonContainer.frame = BUTTONS_CONTAINER_RECT_BIG;
+            description2.alpha = 0;
+        } completion:nil];
+    }
 }
 
 #pragma mark - memory

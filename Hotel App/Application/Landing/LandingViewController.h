@@ -12,6 +12,8 @@
     
     __weak IBOutlet UILabel *clockLabel;
     __weak IBOutlet UILabel *weatherLabel;
+    __weak IBOutlet UIView *buttonContainer;
+    __weak IBOutlet UILabel *description2;
     
     
 }
