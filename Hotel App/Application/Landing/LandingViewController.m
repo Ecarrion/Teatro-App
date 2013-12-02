@@ -12,6 +12,9 @@
 #define BUTTONS_CONTAINER_RECT_BIG CGRectMake(346, 187, 678, 393)
 #define BUTTONS_CONTAINER_RECT_SMALL CGRectMake(683, 187, 678, 393)
 
+#define TOGGLE_BUTTON_RECT_OPEN CGRectMake(281, 539, 46, 30)
+#define TOGGLE_BUTTON_RECT_CLOSE CGRectMake(620, 539, 46, 30)
+
 @interface LandingViewController () {
     
     NSDateFormatter * clockFormater;
@@ -101,6 +104,8 @@
         [UIView animateWithDuration:0.3 animations:^{
             buttonContainer.frame = BUTTONS_CONTAINER_RECT_SMALL;
             description2.alpha = 1;
+            buttonContainer.alpha = 0.5;
+            buttonContainer.userInteractionEnabled = NO;
         } completion:nil];
         
     } else {
@@ -108,6 +113,8 @@
         [UIView animateWithDuration:0.3 animations:^{
             buttonContainer.frame = BUTTONS_CONTAINER_RECT_BIG;
             description2.alpha = 0;
+            buttonContainer.alpha = 1;
+            buttonContainer.userInteractionEnabled = YES;
         } completion:nil];
     }
 }
