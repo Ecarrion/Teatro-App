@@ -48,7 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VyK-b8-Vy8" userLabel="Label - Description - 1">
-                    <rect key="frame" x="27" y="263" width="300" height="270"/>
+                    <rect key="frame" x="27" y="309" width="300" height="232"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <string key="text">Hotel Aimer, the best small hotel in New York City. We're here for you, the traveler. We don't serve some board of directors or some big parent company. We serve you, our most special guest.
 Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is here to keep you warm. In fact, we've been keeping our guests happy for 10 years (that's 3,001 days). We've come to be a part of the city around us, both giving and receiving.</string>
@@ -129,16 +129,21 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0rO-ta-wgf">
-                    <rect key="frame" x="281" y="541" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0rO-ta-wgf">
+                    <rect key="frame" x="304" y="544" width="23" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="open_desc_button.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="toggleDescription:" destination="-1" eventType="touchUpInside" id="Hzd-cS-R1T"/>
                     </connections>
                 </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hotel-icon.png" id="0Gb-8F-OFX">
+                    <rect key="frame" x="138" y="211" width="79" height="82"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -149,5 +154,7 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
         <image name="buttons-background.png" width="678" height="393"/>
         <image name="clock-date-background.png" width="244" height="51"/>
         <image name="horizontal-blur.png" width="1024" height="393"/>
+        <image name="hotel-icon.png" width="79" height="82"/>
+        <image name="open_desc_button.png" width="23" height="23"/>
     </resources>
 </document>
