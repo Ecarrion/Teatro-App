@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CityGuideViewController : UIViewController
+@class MKMapView;
+
+@interface CityGuideViewController : UIViewController {
+    
+    __weak IBOutlet MKMapView *makView;
+}
 
 @end

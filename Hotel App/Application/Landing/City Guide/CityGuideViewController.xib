@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityGuideViewController">
             <connections>
+                <outlet property="makView" destination="R4S-d8-4GQ" id="ENB-Hh-NoV"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -36,6 +37,9 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="R4S-d8-4GQ">
                     <rect key="frame" x="372" y="0.0" width="652" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="sNQ-d7-2v8"/>
+                    </connections>
                 </mapView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

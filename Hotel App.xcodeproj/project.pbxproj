@@ -70,6 +70,8 @@
 		26F42BF0184D7D4D003E3791 /* CityGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F42BEE184D7D4D003E3791 /* CityGuideViewController.m */; };
 		26F42BF1184D7D4D003E3791 /* CityGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BEF184D7D4D003E3791 /* CityGuideViewController.xib */; };
 		26F42BF3184D7E61003E3791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F42BF2184D7E61003E3791 /* MapKit.framework */; };
+		26F42BF6184D838E003E3791 /* FoursquareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F42BF5184D838E003E3791 /* FoursquareManager.m */; };
+		26F42BF9184D8633003E3791 /* CityLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F42BF8184D8633003E3791 /* CityLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,10 @@
 		26F42BEE184D7D4D003E3791 /* CityGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGuideViewController.m; sourceTree = "<group>"; };
 		26F42BEF184D7D4D003E3791 /* CityGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityGuideViewController.xib; sourceTree = "<group>"; };
 		26F42BF2184D7E61003E3791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		26F42BF4184D838E003E3791 /* FoursquareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareManager.h; sourceTree = "<group>"; };
+		26F42BF5184D838E003E3791 /* FoursquareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareManager.m; sourceTree = "<group>"; };
+		26F42BF7184D8633003E3791 /* CityLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityLocation.h; sourceTree = "<group>"; };
+		26F42BF8184D8633003E3791 /* CityLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +356,10 @@
 			children = (
 				267ADA711839D5330053D94C /* Weather.h */,
 				267ADA721839D5330053D94C /* Weather.m */,
+				26F42BF4184D838E003E3791 /* FoursquareManager.h */,
+				26F42BF5184D838E003E3791 /* FoursquareManager.m */,
+				26F42BF7184D8633003E3791 /* CityLocation.h */,
+				26F42BF8184D8633003E3791 /* CityLocation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -559,9 +569,11 @@
 				267ADA671839D3FF0053D94C /* AFURLResponseSerialization.m in Sources */,
 				267ADA651839D3FF0053D94C /* AFURLConnectionOperation.m in Sources */,
 				267ADA6C1839D3FF0053D94C /* UIButton+AFNetworking.m in Sources */,
+				26F42BF9184D8633003E3791 /* CityLocation.m in Sources */,
 				26F42BF0184D7D4D003E3791 /* CityGuideViewController.m in Sources */,
 				26F42BDE184D7474003E3791 /* DiningViewController.m in Sources */,
 				267ADA6A1839D3FF0053D94C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				26F42BF6184D838E003E3791 /* FoursquareManager.m in Sources */,
 				267ADA641839D3FF0053D94C /* AFSecurityPolicy.m in Sources */,
 				267ADA621839D3FF0053D94C /* AFHTTPSessionManager.m in Sources */,
 				267ADA6B1839D3FF0053D94C /* UIAlertView+AFNetworking.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "CityGuideViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface CityGuideViewController ()
 
