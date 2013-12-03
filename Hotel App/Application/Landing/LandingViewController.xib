@@ -80,6 +80,9 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="eStorePressed" destination="-1" eventType="touchUpInside" id="TDV-nM-U3H"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hUY-1W-5ZK">
                             <rect key="frame" x="58" y="244" width="54" height="35"/>
@@ -89,6 +92,9 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="spaPressed" destination="-1" eventType="touchUpInside" id="ewl-Pj-eBJ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KKk-aH-koD">
                             <rect key="frame" x="212" y="231" width="93" height="62"/>
@@ -98,6 +104,9 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="cityGuidePressed" destination="-1" eventType="touchUpInside" id="N27-hX-2Wo"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="86s-DY-AfT">
                             <rect key="frame" x="537" y="99" width="117" height="73"/>
@@ -107,6 +116,9 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="otherLocationsPressed" destination="-1" eventType="touchUpInside" id="BYV-B9-WLc"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L6h-xc-gsh">
                             <rect key="frame" x="480" y="311" width="68" height="35"/>
@@ -116,6 +128,9 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="diningLocationsPressed" destination="-1" eventType="touchUpInside" id="NYF-RQ-NPU"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="laW-Hx-I0O">
                             <rect key="frame" x="365" y="114" width="123" height="35"/>
@@ -125,6 +140,9 @@ Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="amenitiesPressed" destination="-1" eventType="touchUpInside" id="KrV-oF-72D"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

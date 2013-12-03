@@ -59,6 +59,17 @@
 		26F42BD7184D6C58003E3791 /* open_desc_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BD1184D6C58003E3791 /* open_desc_button@2x.png */; };
 		26F42BD8184D6C58003E3791 /* hotel-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BD2184D6C58003E3791 /* hotel-icon.png */; };
 		26F42BD9184D6C58003E3791 /* hotel-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BD3184D6C58003E3791 /* hotel-icon@2x.png */; };
+		26F42BDE184D7474003E3791 /* DiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F42BDC184D7474003E3791 /* DiningViewController.m */; };
+		26F42BDF184D7474003E3791 /* DiningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BDD184D7474003E3791 /* DiningViewController.xib */; };
+		26F42BE4184D76DA003E3791 /* blurry-info-panel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BE0184D76DA003E3791 /* blurry-info-panel@2x.png */; };
+		26F42BE5184D76DA003E3791 /* blurry-info-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BE1184D76DA003E3791 /* blurry-info-panel.png */; };
+		26F42BE6184D76DA003E3791 /* left-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BE2184D76DA003E3791 /* left-panel.png */; };
+		26F42BE7184D76DA003E3791 /* left-panel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BE3184D76DA003E3791 /* left-panel@2x.png */; };
+		26F42BEA184D771E003E3791 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BE8184D771E003E3791 /* back.png */; };
+		26F42BEB184D771E003E3791 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BE9184D771E003E3791 /* back@2x.png */; };
+		26F42BF0184D7D4D003E3791 /* CityGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F42BEE184D7D4D003E3791 /* CityGuideViewController.m */; };
+		26F42BF1184D7D4D003E3791 /* CityGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BEF184D7D4D003E3791 /* CityGuideViewController.xib */; };
+		26F42BF3184D7E61003E3791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F42BF2184D7E61003E3791 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +160,19 @@
 		26F42BD1184D6C58003E3791 /* open_desc_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_desc_button@2x.png"; sourceTree = "<group>"; };
 		26F42BD2184D6C58003E3791 /* hotel-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hotel-icon.png"; sourceTree = "<group>"; };
 		26F42BD3184D6C58003E3791 /* hotel-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hotel-icon@2x.png"; sourceTree = "<group>"; };
+		26F42BDB184D7474003E3791 /* DiningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningViewController.h; sourceTree = "<group>"; };
+		26F42BDC184D7474003E3791 /* DiningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiningViewController.m; sourceTree = "<group>"; };
+		26F42BDD184D7474003E3791 /* DiningViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiningViewController.xib; sourceTree = "<group>"; };
+		26F42BE0184D76DA003E3791 /* blurry-info-panel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blurry-info-panel@2x.png"; sourceTree = "<group>"; };
+		26F42BE1184D76DA003E3791 /* blurry-info-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blurry-info-panel.png"; sourceTree = "<group>"; };
+		26F42BE2184D76DA003E3791 /* left-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-panel.png"; sourceTree = "<group>"; };
+		26F42BE3184D76DA003E3791 /* left-panel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-panel@2x.png"; sourceTree = "<group>"; };
+		26F42BE8184D771E003E3791 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		26F42BE9184D771E003E3791 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		26F42BED184D7D4D003E3791 /* CityGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityGuideViewController.h; sourceTree = "<group>"; };
+		26F42BEE184D7D4D003E3791 /* CityGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGuideViewController.m; sourceTree = "<group>"; };
+		26F42BEF184D7D4D003E3791 /* CityGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityGuideViewController.xib; sourceTree = "<group>"; };
+		26F42BF2184D7E61003E3791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F42BF3184D7E61003E3791 /* MapKit.framework in Frameworks */,
 				268EB678183D986E009AD9BB /* QuartzCore.framework in Frameworks */,
 				267ADA091839BF460053D94C /* CoreGraphics.framework in Frameworks */,
 				267ADA0B1839BF460053D94C /* UIKit.framework in Frameworks */,
@@ -198,6 +223,7 @@
 		267ADA051839BF460053D94C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26F42BF2184D7E61003E3791 /* MapKit.framework */,
 				268EB677183D986E009AD9BB /* QuartzCore.framework */,
 				267ADA061839BF460053D94C /* Foundation.framework */,
 				267ADA081839BF460053D94C /* CoreGraphics.framework */,
@@ -334,6 +360,8 @@
 				267ADA751839D90A0053D94C /* LandingViewController.h */,
 				267ADA761839D90A0053D94C /* LandingViewController.m */,
 				267ADA771839D90A0053D94C /* LandingViewController.xib */,
+				26F42BDA184D7466003E3791 /* Dining */,
+				26F42BEC184D7D3F003E3791 /* City Guide */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -349,6 +377,12 @@
 		26A2065D183C757B00568A67 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				26F42BE8184D771E003E3791 /* back.png */,
+				26F42BE9184D771E003E3791 /* back@2x.png */,
+				26F42BE0184D76DA003E3791 /* blurry-info-panel@2x.png */,
+				26F42BE1184D76DA003E3791 /* blurry-info-panel.png */,
+				26F42BE2184D76DA003E3791 /* left-panel.png */,
+				26F42BE3184D76DA003E3791 /* left-panel@2x.png */,
 				26F42BCE184D6C58003E3791 /* close_desc_button.png */,
 				26F42BCF184D6C58003E3791 /* close_desc_button@2x.png */,
 				26F42BD0184D6C58003E3791 /* open_desc_button.png */,
@@ -369,6 +403,26 @@
 				26A20661183C757B00568A67 /* gray-burry@2x.png */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		26F42BDA184D7466003E3791 /* Dining */ = {
+			isa = PBXGroup;
+			children = (
+				26F42BDB184D7474003E3791 /* DiningViewController.h */,
+				26F42BDC184D7474003E3791 /* DiningViewController.m */,
+				26F42BDD184D7474003E3791 /* DiningViewController.xib */,
+			);
+			path = Dining;
+			sourceTree = "<group>";
+		};
+		26F42BEC184D7D3F003E3791 /* City Guide */ = {
+			isa = PBXGroup;
+			children = (
+				26F42BED184D7D4D003E3791 /* CityGuideViewController.h */,
+				26F42BEE184D7D4D003E3791 /* CityGuideViewController.m */,
+				26F42BEF184D7D4D003E3791 /* CityGuideViewController.xib */,
+			);
+			path = "City Guide";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,20 +504,28 @@
 				26A20664183C757B00568A67 /* gray-burry.png in Resources */,
 				2642A98B18485AEE00A830EE /* buttons-background@2x.png in Resources */,
 				2642A98A18485AEE00A830EE /* buttons-background.png in Resources */,
+				26F42BEA184D771E003E3791 /* back.png in Resources */,
 				267ADA3A1839C4130053D94C /* LockscreenViewController.xib in Resources */,
 				2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */,
+				26F42BEB184D771E003E3791 /* back@2x.png in Resources */,
 				26F42BD9184D6C58003E3791 /* hotel-icon@2x.png in Resources */,
 				26A20665183C757B00568A67 /* gray-burry@2x.png in Resources */,
 				2642A9871848580100A830EE /* clock-date-background@2x.png in Resources */,
 				268EB676183D973D009AD9BB /* separator@2x.png in Resources */,
 				26A20662183C757B00568A67 /* Default-Landscape.png in Resources */,
 				267ADA111839BF460053D94C /* InfoPlist.strings in Resources */,
+				26F42BE5184D76DA003E3791 /* blurry-info-panel.png in Resources */,
+				26F42BDF184D7474003E3791 /* DiningViewController.xib in Resources */,
 				26A20663183C757B00568A67 /* Default-Landscape@2x.png in Resources */,
 				267ADA791839D90A0053D94C /* LandingViewController.xib in Resources */,
 				2642A9861848580100A830EE /* clock-date-background.png in Resources */,
+				26F42BE6184D76DA003E3791 /* left-panel.png in Resources */,
 				26F42BD6184D6C58003E3791 /* open_desc_button.png in Resources */,
 				26F42BD8184D6C58003E3791 /* hotel-icon.png in Resources */,
 				26F42BD7184D6C58003E3791 /* open_desc_button@2x.png in Resources */,
+				26F42BE7184D76DA003E3791 /* left-panel@2x.png in Resources */,
+				26F42BF1184D7D4D003E3791 /* CityGuideViewController.xib in Resources */,
+				26F42BE4184D76DA003E3791 /* blurry-info-panel@2x.png in Resources */,
 				26F42BD4184D6C58003E3791 /* close_desc_button.png in Resources */,
 				2642A9841848580100A830EE /* horizontal-blur.png in Resources */,
 				26F42BD5184D6C58003E3791 /* close_desc_button@2x.png in Resources */,
@@ -497,6 +559,8 @@
 				267ADA671839D3FF0053D94C /* AFURLResponseSerialization.m in Sources */,
 				267ADA651839D3FF0053D94C /* AFURLConnectionOperation.m in Sources */,
 				267ADA6C1839D3FF0053D94C /* UIButton+AFNetworking.m in Sources */,
+				26F42BF0184D7D4D003E3791 /* CityGuideViewController.m in Sources */,
+				26F42BDE184D7474003E3791 /* DiningViewController.m in Sources */,
 				267ADA6A1839D3FF0053D94C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				267ADA641839D3FF0053D94C /* AFSecurityPolicy.m in Sources */,
 				267ADA621839D3FF0053D94C /* AFHTTPSessionManager.m in Sources */,

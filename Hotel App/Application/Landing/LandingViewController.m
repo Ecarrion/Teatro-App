@@ -9,6 +9,9 @@
 #import "LandingViewController.h"
 #import "Weather.h"
 
+#import "DiningViewController.h"
+#import "CityGuideViewController.h"
+
 #define BUTTONS_CONTAINER_RECT_BIG CGRectMake(346, 187, 678, 393)
 #define BUTTONS_CONTAINER_RECT_SMALL CGRectMake(683, 187, 678, 393)
 
@@ -97,6 +100,8 @@
     }];
 }
 
+#pragma mark - IBActions
+
 - (IBAction)toggleDescription:(id)sender {
     
     if (buttonContainer.frame.origin.x == BUTTONS_CONTAINER_RECT_BIG.origin.x) {
@@ -130,6 +135,35 @@
             
         } completion:nil];
     }
+}
+
+-(IBAction)spaPressed {
+    
+}
+
+-(IBAction)eStorePressed {
+    
+}
+
+-(IBAction)cityGuidePressed {
+    
+    CityGuideViewController * cgvc = [[CityGuideViewController alloc] init];
+    [self.navigationController pushViewController:cgvc animated:YES];
+}
+
+-(IBAction)amenitiesPressed {
+    
+}
+
+-(IBAction)otherLocationsPressed {
+    
+}
+
+-(IBAction)diningLocationsPressed {
+    
+    DiningViewController * dvc = [[DiningViewController alloc] init];
+    [self.navigationController pushViewController:dvc animated:YES];
+    
 }
 
 #pragma mark - memory
