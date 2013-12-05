@@ -13,6 +13,7 @@
 @interface CityGuideViewController () {
     
     NSMutableArray * arrayOfArrayOfLocations;
+    NSMutableArray * arrayOfArrayOfAnotations;
 }
 
 @end
@@ -40,11 +41,14 @@
 -(void)loadLocations {
     
     arrayOfArrayOfLocations = [NSMutableArray array];
+    arrayOfArrayOfAnotations = [NSMutableArray array];
+    
     for (int i = 0; i < 3; i++) {
         
         [FoursquareManager cityObject:i onCompletion:^(NSError *error, NSArray *locations) {
             
             if (!error) {
+                
                 if (arrayOfArrayOfLocations.count >= i) {
                     [arrayOfArrayOfLocations insertObject:locations atIndex:i];
                 } else {
@@ -52,12 +56,20 @@
                 }
                 
                 
+                NSMutableArray * anotations = [NSMutableArray array];
                 [locations enumerateObjectsUsingBlock:^(CityLocation * location, NSUInteger idx, BOOL *stop) {
                     
                     HOAnotationView * anonView = [HOAnotationView anotationWithLat:location.latitude lng:location.longitude title:location.name subtitle:location.address];
                     [makView addAnnotation:anonView];
                     
+                    [anotations addObject:anonView];
                 }];
+                
+                if (arrayOfArrayOfAnotations.count >= i) {
+                    [arrayOfArrayOfAnotations insertObject:anotations atIndex:i];
+                } else {
+                    [arrayOfArrayOfAnotations addObject:anotations];
+                }
             }
             
             [cityTableView reloadData];
@@ -129,6 +141,15 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    HOAnotationView * annotation = arrayOfArrayOfAnotations[indexPath.section][indexPath.row];
+    [makView selectAnnotation:annotation animated:YES];
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 1500, 1500);
+	[makView setRegion:region animated:YES];
+}
+
 #pragma mark - Map Delegate
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -136,9 +157,21 @@
     MKPinAnnotationView * newAnnotation = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annotation1"];
     newAnnotation.pinColor = MKPinAnnotationColorRed;
     newAnnotation.animatesDrop = YES;
-    newAnnotation.canShowCallout = NO;
+    newAnnotation.canShowCallout = YES;
     return newAnnotation;
     
+}
+
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    for (int section = 0; section < arrayOfArrayOfAnotations.count; section++) {
+        int row = [arrayOfArrayOfAnotations[section] indexOfObject:view.annotation];
+        if (row != NSNotFound) {
+            NSIndexPath * ip = [NSIndexPath indexPathForRow:row inSection:section];
+            [cityTableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+            break;
+        }
+    }
 }
 
 
