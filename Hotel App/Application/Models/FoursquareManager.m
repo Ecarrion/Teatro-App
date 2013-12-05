@@ -15,6 +15,7 @@
     
     NSString * categoryID = @"";
     NSString * type = @"";
+    NSString * radius = @"0";
     
     switch (objectType) {
             
@@ -22,6 +23,7 @@
             
             categoryID = @"4bf58dd8d48988d1c4941735";
             type = @"restaurant";
+            radius = @"4800";
             
             break;
         }
@@ -30,6 +32,7 @@
             
             categoryID = @"4bf58dd8d48988d16d941735";
             type = @"cafe";
+            radius = @"4800";
             
             break;
         }
@@ -38,14 +41,16 @@
             
             categoryID = @"4bf58dd8d48988d116941735";
             type = @"bar";
+            radius = @"4800";
             
             break;
         }
             
         case kTheater: {
             
-            categoryID = @"";
+            categoryID = @"4bf58dd8d48988d137941735";
             type = @"theater";
+            radius = @"20000";
             
             break;
         }
@@ -54,7 +59,7 @@
             break;
     }
     
-    NSString * endPoint = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?client_id=5QP2LIEQLOUSYUJILXBOLK5YG3DZFU2N3O1ADFP3VJBRW2V1&client_secret=YEB1ZU2KG41UFHCP2ZQOYVFNHGBZS2CHFL1QFXSDM4PXBMYG&radius=4800&categoryId=%@&q=%@&ll=%f,%f", categoryID, type, HOTEL_LATITUDE, HOTEL_LONGITUDE];
+    NSString * endPoint = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?client_id=5QP2LIEQLOUSYUJILXBOLK5YG3DZFU2N3O1ADFP3VJBRW2V1&client_secret=YEB1ZU2KG41UFHCP2ZQOYVFNHGBZS2CHFL1QFXSDM4PXBMYG&radius=%@&categoryId=%@&q=%@&ll=%f,%f", radius, categoryID, type, HOTEL_LATITUDE, HOTEL_LONGITUDE];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:endPoint parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {

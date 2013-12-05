@@ -40,21 +40,17 @@
 
 -(void)loadLocations {
     
-    arrayOfArrayOfLocations = [NSMutableArray array];
-    arrayOfArrayOfAnotations = [NSMutableArray array];
+    arrayOfArrayOfLocations = [@[[NSNull null], [NSNull null], [NSNull null], [NSNull null]] mutableCopy];
+    arrayOfArrayOfAnotations = [@[[NSNull null], [NSNull null], [NSNull null], [NSNull null]] mutableCopy];
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 4; i++) {
         
         [FoursquareManager cityObject:i onCompletion:^(NSError *error, NSArray *locations) {
             
             if (!error) {
                 
-                if (arrayOfArrayOfLocations.count >= i) {
-                    [arrayOfArrayOfLocations insertObject:locations atIndex:i];
-                } else {
-                    [arrayOfArrayOfLocations addObject:locations];
-                }
                 
+                [arrayOfArrayOfLocations replaceObjectAtIndex:i withObject:locations];
                 
                 NSMutableArray * anotations = [NSMutableArray array];
                 [locations enumerateObjectsUsingBlock:^(CityLocation * location, NSUInteger idx, BOOL *stop) {
@@ -65,11 +61,7 @@
                     [anotations addObject:anonView];
                 }];
                 
-                if (arrayOfArrayOfAnotations.count >= i) {
-                    [arrayOfArrayOfAnotations insertObject:anotations atIndex:i];
-                } else {
-                    [arrayOfArrayOfAnotations addObject:anotations];
-                }
+                [arrayOfArrayOfAnotations replaceObjectAtIndex:i withObject:anotations];
             }
             
             [cityTableView reloadData];
@@ -126,7 +118,13 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [arrayOfArrayOfLocations[section] count];
+    int number = 0;
+    
+    if (arrayOfArrayOfAnotations[section] != [NSNull null]) {
+        number = [arrayOfArrayOfLocations[section] count];
+    }
+    
+    return number;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
