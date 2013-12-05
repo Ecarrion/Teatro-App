@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263DD11618502AC700A891CC /* HOAnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DD11518502AC700A891CC /* HOAnotationView.m */; };
 		2642A9841848580100A830EE /* horizontal-blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9801848580100A830EE /* horizontal-blur.png */; };
 		2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9811848580100A830EE /* horizontal-blur@2x.png */; };
 		2642A9861848580100A830EE /* clock-date-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9821848580100A830EE /* clock-date-background.png */; };
@@ -85,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		263DD11418502AC700A891CC /* HOAnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOAnotationView.h; sourceTree = "<group>"; };
+		263DD11518502AC700A891CC /* HOAnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOAnotationView.m; sourceTree = "<group>"; };
 		2642A9801848580100A830EE /* horizontal-blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-blur.png"; sourceTree = "<group>"; };
 		2642A9811848580100A830EE /* horizontal-blur@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-blur@2x.png"; sourceTree = "<group>"; };
 		2642A9821848580100A830EE /* clock-date-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-date-background.png"; sourceTree = "<group>"; };
@@ -207,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263DD11318502AA500A891CC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				263DD11418502AC700A891CC /* HOAnotationView.h */,
+				263DD11518502AC700A891CC /* HOAnotationView.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		267AD9FA1839BF460053D94C = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +296,7 @@
 		267ADA351839C3B10053D94C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				263DD11318502AA500A891CC /* Utils */,
 				267ADA361839C4130053D94C /* LockscreenViewController.h */,
 				267ADA371839C4130053D94C /* LockscreenViewController.m */,
 				267ADA381839C4130053D94C /* LockscreenViewController.xib */,
@@ -577,6 +590,7 @@
 				267ADA641839D3FF0053D94C /* AFSecurityPolicy.m in Sources */,
 				267ADA621839D3FF0053D94C /* AFHTTPSessionManager.m in Sources */,
 				267ADA6B1839D3FF0053D94C /* UIAlertView+AFNetworking.m in Sources */,
+				263DD11618502AC700A891CC /* HOAnotationView.m in Sources */,
 				267ADA661839D3FF0053D94C /* AFURLRequestSerialization.m in Sources */,
 				267ADA691839D3FF0053D94C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				267ADA6F1839D3FF0053D94C /* UIWebView+AFNetworking.m in Sources */,

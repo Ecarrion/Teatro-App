@@ -10,6 +10,19 @@
 
 @implementation CityLocation
 
-
+-(id)initWithFoursquareData:(NSDictionary *)fqData {
+    
+    self = [super init];
+    if (self) {
+        
+        self.name = fqData[@"name"];
+        self.address = fqData[@"location"][@"address"];
+        
+        self.latitude = [fqData[@"location"][@"lat"] doubleValue];
+        self.longitude = [fqData[@"location"][@"lng"] doubleValue];
+    }
+    
+    return self;
+}
 
 @end

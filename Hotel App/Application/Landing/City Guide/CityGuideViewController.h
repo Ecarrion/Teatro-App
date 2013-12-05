@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@class MKMapView;
 
-@interface CityGuideViewController : UIViewController {
+@interface CityGuideViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate> {
     
     __weak IBOutlet MKMapView *makView;
+    __weak IBOutlet UITableView *cityTableView;
+    
 }
 
 @end

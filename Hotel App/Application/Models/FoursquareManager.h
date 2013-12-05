@@ -20,6 +20,6 @@ typedef enum {
 
 @interface FoursquareManager : NSObject
 
-+(void)cityObject:(NSString *)cityType onCompletion:(void(^)(NSError * error, NSArray * locations))block;
++(void)cityObject:(CityObjectType )objectType onCompletion:(void(^)(NSError * error, NSArray * locations))block;
 
 @end
