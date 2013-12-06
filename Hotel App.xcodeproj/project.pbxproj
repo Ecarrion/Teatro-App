@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2604F91718517DFB00CB5B81 /* AmenitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2604F91518517DFB00CB5B81 /* AmenitiesViewController.m */; };
 		2604F91818517DFB00CB5B81 /* AmenitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2604F91618517DFB00CB5B81 /* AmenitiesViewController.xib */; };
+		2604F91B1851843500CB5B81 /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2604F91A1851843500CB5B81 /* UINavigationController+Retro.m */; };
 		263DD11618502AC700A891CC /* HOAnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DD11518502AC700A891CC /* HOAnotationView.m */; };
 		2642A9841848580100A830EE /* horizontal-blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9801848580100A830EE /* horizontal-blur.png */; };
 		2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9811848580100A830EE /* horizontal-blur@2x.png */; };
@@ -91,6 +92,8 @@
 		2604F91418517DFB00CB5B81 /* AmenitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmenitiesViewController.h; sourceTree = "<group>"; };
 		2604F91518517DFB00CB5B81 /* AmenitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmenitiesViewController.m; sourceTree = "<group>"; };
 		2604F91618517DFB00CB5B81 /* AmenitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmenitiesViewController.xib; sourceTree = "<group>"; };
+		2604F9191851843500CB5B81 /* UINavigationController+Retro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Retro.h"; sourceTree = "<group>"; };
+		2604F91A1851843500CB5B81 /* UINavigationController+Retro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Retro.m"; sourceTree = "<group>"; };
 		263DD11418502AC700A891CC /* HOAnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOAnotationView.h; sourceTree = "<group>"; };
 		263DD11518502AC700A891CC /* HOAnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOAnotationView.m; sourceTree = "<group>"; };
 		2642A9801848580100A830EE /* horizontal-blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-blur.png"; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 			children = (
 				263DD11418502AC700A891CC /* HOAnotationView.h */,
 				263DD11518502AC700A891CC /* HOAnotationView.m */,
+				2604F9191851843500CB5B81 /* UINavigationController+Retro.h */,
+				2604F91A1851843500CB5B81 /* UINavigationController+Retro.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 			files = (
 				267ADA601839D3FF0053D94C /* AFHTTPRequestOperation.m in Sources */,
 				267ADA781839D90A0053D94C /* LandingViewController.m in Sources */,
+				2604F91B1851843500CB5B81 /* UINavigationController+Retro.m in Sources */,
 				267ADA6D1839D3FF0053D94C /* UIImageView+AFNetworking.m in Sources */,
 				267ADA171839BF460053D94C /* AppDelegate.m in Sources */,
 				267ADA611839D3FF0053D94C /* AFHTTPRequestOperationManager.m in Sources */,
