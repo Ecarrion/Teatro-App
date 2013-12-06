@@ -33,6 +33,27 @@
                         <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="3Iq-QQ-I1l"/>
                     </connections>
                 </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="check.png" id="YP4-ov-b3n">
+                    <rect key="frame" x="0.0" y="52" width="372" height="248"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAFE HA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3eL-ph-mOD">
+                    <rect key="frame" x="116" y="324" width="141" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r3k-ew-sql">
+                    <rect key="frame" x="29" y="376" width="315" height="366"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <mutableString key="text">Cafe HA is our very own 4 star restaurant. It's spectaluar. Don't just take our word for it, however—give it a try. You won't be disappointed.
+Cafe HA is led by Head Chef Philippe François. Philippe has 29 years of experience leading kitchens across the world from France to Australia to America. He's done it all, and he's done it very well.
+ We serve all throughout the day, ensuring you're well fed and traveling on a happy stomach. Head out for the day with some of our double stuffed french toast, or finish the day with our homemade pasta alfredo. We know you'll like whatever you decide to try.</mutableString>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -42,6 +63,7 @@
     <resources>
         <image name="back.png" width="124" height="50"/>
         <image name="blurry-info-panel.png" width="245" height="50"/>
+        <image name="check.png" width="372" height="248"/>
         <image name="left-panel.png" width="372" height="716"/>
     </resources>
 </document>
