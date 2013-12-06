@@ -50,16 +50,15 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VyK-b8-Vy8" userLabel="Label - Description - 1">
                     <rect key="frame" x="27" y="309" width="300" height="232"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Hotel Aimer, the best small hotel in New York City. We're here for you, the traveler. We don't serve some board of directors or some big parent company. We serve you, our most special guest.
-Whether you're traveling for business, pleasure, or a night away, Hotel Aimer is here to keep you warm. In fact, we've been keeping our guests happy for 10 years (that's 3,001 days). We've come to be a part of the city around us, both giving and receiving.</string>
+                    <string key="text">Hotel Teatro is ideally located in the heart of downtown Denver, directly across from the Denver Center for Performing Arts and just two blocks from the Colorado Convention Center. The 16th Street Mall, Larimer Square, and the nightlife of Lower Downtown “LoDo” Historic District are only steps from our front door. Coors Field, the Pepsi Center, and Denver Pavilions are also within walking distance.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7na-nu-g9Q" userLabel="Label - Description - 2">
-                    <rect key="frame" x="360" y="200" width="300" height="300"/>
+                    <rect key="frame" x="360" y="313" width="300" height="129"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Our goal is great service. We feel we have a very simple mission: provide a place where people can escape reality. We want you to spend your nights here without worrying about a thing. Our staff are here for a single purpose—to serve you. It's that simple. We could go on and on about our service, the quality of our rooms, or any of the other things that make Hotel Aimer a great place to stay. Like many things, however, seeing is believing. Enjoy your stay. Relax. Walk around. Do whateve you'd like, and know that there's a bed waiting for you when you get back.</string>
+                    <string key="text">Denver International Airport is 25 miles away. The majestic backdrop of the Colorado Rocky Mountains and the central Denver location makes Hotel Teatro the perfect choice for business or pleasure.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

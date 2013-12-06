@@ -12,6 +12,8 @@
 #import "DiningViewController.h"
 #import "CityGuideViewController.h"
 
+#import "AmenitiesViewController.h"
+
 #define BUTTONS_CONTAINER_RECT_BIG CGRectMake(346, 187, 678, 393)
 #define BUTTONS_CONTAINER_RECT_SMALL CGRectMake(683, 187, 678, 393)
 
@@ -153,6 +155,8 @@
 
 -(IBAction)amenitiesPressed {
     
+    AmenitiesViewController * avc = [[AmenitiesViewController alloc] init];
+    [self.navigationController pushViewController:avc animated:YES];
 }
 
 -(IBAction)otherLocationsPressed {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2604F91718517DFB00CB5B81 /* AmenitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2604F91518517DFB00CB5B81 /* AmenitiesViewController.m */; };
+		2604F91818517DFB00CB5B81 /* AmenitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2604F91618517DFB00CB5B81 /* AmenitiesViewController.xib */; };
 		263DD11618502AC700A891CC /* HOAnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DD11518502AC700A891CC /* HOAnotationView.m */; };
 		2642A9841848580100A830EE /* horizontal-blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9801848580100A830EE /* horizontal-blur.png */; };
 		2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9811848580100A830EE /* horizontal-blur@2x.png */; };
@@ -86,6 +88,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2604F91418517DFB00CB5B81 /* AmenitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmenitiesViewController.h; sourceTree = "<group>"; };
+		2604F91518517DFB00CB5B81 /* AmenitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmenitiesViewController.m; sourceTree = "<group>"; };
+		2604F91618517DFB00CB5B81 /* AmenitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmenitiesViewController.xib; sourceTree = "<group>"; };
 		263DD11418502AC700A891CC /* HOAnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOAnotationView.h; sourceTree = "<group>"; };
 		263DD11518502AC700A891CC /* HOAnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOAnotationView.m; sourceTree = "<group>"; };
 		2642A9801848580100A830EE /* horizontal-blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-blur.png"; sourceTree = "<group>"; };
@@ -210,6 +215,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2604F91318517DD300CB5B81 /* Amenities */ = {
+			isa = PBXGroup;
+			children = (
+				2604F91418517DFB00CB5B81 /* AmenitiesViewController.h */,
+				2604F91518517DFB00CB5B81 /* AmenitiesViewController.m */,
+				2604F91618517DFB00CB5B81 /* AmenitiesViewController.xib */,
+			);
+			path = Amenities;
+			sourceTree = "<group>";
+		};
 		263DD11318502AA500A891CC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +400,7 @@
 				267ADA771839D90A0053D94C /* LandingViewController.xib */,
 				26F42BDA184D7466003E3791 /* Dining */,
 				26F42BEC184D7D3F003E3791 /* City Guide */,
+				2604F91318517DD300CB5B81 /* Amenities */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -537,6 +553,7 @@
 				268EB676183D973D009AD9BB /* separator@2x.png in Resources */,
 				26A20662183C757B00568A67 /* Default-Landscape.png in Resources */,
 				267ADA111839BF460053D94C /* InfoPlist.strings in Resources */,
+				2604F91818517DFB00CB5B81 /* AmenitiesViewController.xib in Resources */,
 				26F42BE5184D76DA003E3791 /* blurry-info-panel.png in Resources */,
 				26F42BDF184D7474003E3791 /* DiningViewController.xib in Resources */,
 				26A20663183C757B00568A67 /* Default-Landscape@2x.png in Resources */,
@@ -576,6 +593,7 @@
 				267ADA6D1839D3FF0053D94C /* UIImageView+AFNetworking.m in Sources */,
 				267ADA171839BF460053D94C /* AppDelegate.m in Sources */,
 				267ADA611839D3FF0053D94C /* AFHTTPRequestOperationManager.m in Sources */,
+				2604F91718517DFB00CB5B81 /* AmenitiesViewController.m in Sources */,
 				267ADA731839D5330053D94C /* Weather.m in Sources */,
 				267ADA6E1839D3FF0053D94C /* UIProgressView+AFNetworking.m in Sources */,
 				267ADA631839D3FF0053D94C /* AFNetworkReachabilityManager.m in Sources */,
