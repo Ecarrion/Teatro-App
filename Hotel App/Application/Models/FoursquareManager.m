@@ -71,6 +71,10 @@
         [items enumerateObjectsUsingBlock:^(NSDictionary * fqData, NSUInteger idx, BOOL *stop) {
             
             [locations addObject:[[CityLocation alloc] initWithFoursquareData:fqData]];
+            
+            if (idx >= 10)
+                *stop = YES;
+        
         }];
         
         if (block) {

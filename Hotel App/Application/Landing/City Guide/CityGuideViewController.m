@@ -71,7 +71,7 @@
 
 -(void)centerMap {
     
-	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(HOTEL_LATITUDE, HOTEL_LONGITUDE), 10000, 10000);
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(HOTEL_LATITUDE, HOTEL_LONGITUDE), 4000, 4000);
 	[makView setRegion:region animated:YES];
     
 }
