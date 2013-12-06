@@ -23,7 +23,7 @@
             
             categoryID = @"4bf58dd8d48988d1c4941735";
             type = @"restaurant";
-            radius = @"4800";
+            radius = @"3000";
             
             break;
         }
@@ -32,7 +32,7 @@
             
             categoryID = @"4bf58dd8d48988d16d941735";
             type = @"cafe";
-            radius = @"4800";
+            radius = @"3000";
             
             break;
         }
@@ -41,7 +41,7 @@
             
             categoryID = @"4bf58dd8d48988d116941735";
             type = @"bar";
-            radius = @"4800";
+            radius = @"3000";
             
             break;
         }
@@ -50,7 +50,7 @@
             
             categoryID = @"4bf58dd8d48988d137941735";
             type = @"theater";
-            radius = @"20000";
+            radius = @"3000";
             
             break;
         }

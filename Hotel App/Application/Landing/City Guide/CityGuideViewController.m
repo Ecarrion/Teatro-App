@@ -118,7 +118,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    int number = 0;
+    NSUInteger number = 0;
     
     if (arrayOfArrayOfAnotations[section] != [NSNull null]) {
         number = [arrayOfArrayOfLocations[section] count];
