@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiningViewController : UIViewController
+typedef enum {
+    
+    kBreakfast,
+    kLunch,
+    kDinner
+    
+}FoodType;
+
+@interface DiningViewController : UIViewController {
+    
+    
+    __weak IBOutlet UITableView *foodTableView;
+}
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *segmentedButtons;
+
 
 @end

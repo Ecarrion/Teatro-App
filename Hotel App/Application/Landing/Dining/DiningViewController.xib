@@ -6,7 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiningViewController">
             <connections>
+                <outlet property="foodTableView" destination="jSH-P1-WKG" id="314-zn-PmA"/>
                 <outlet property="view" destination="2" id="3"/>
+                <outletCollection property="segmentedButtons" destination="7KV-Ey-xTI" id="E0W-qr-VDy"/>
+                <outletCollection property="segmentedButtons" destination="Hta-wy-EzB" id="mi2-bE-bIf"/>
+                <outletCollection property="segmentedButtons" destination="DPh-Ld-Y8O" id="dSB-ug-fi4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -37,7 +41,7 @@
                     <rect key="frame" x="0.0" y="52" width="372" height="248"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAFE HA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3eL-ph-mOD">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3eL-ph-mOD">
                     <rect key="frame" x="116" y="324" width="141" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
@@ -47,38 +51,72 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r3k-ew-sql" userLabel="Label - Description">
                     <rect key="frame" x="29" y="376" width="315" height="366"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <mutableString key="text">Cafe HA is our very own 4 star restaurant. It's spectaluar. Don't just take our word for it, however—give it a try. You won't be disappointed.
-Cafe HA is led by Head Chef Philippe François. Philippe has 29 years of experience leading kitchens across the world from France to Australia to America. He's done it all, and he's done it very well.
- We serve all throughout the day, ensuring you're well fed and traveling on a happy stomach. Head out for the day with some of our double stuffed french toast, or finish the day with our homemade pasta alfredo. We know you'll like whatever you decide to try.</mutableString>
+                    <mutableString key="text">Award-winning chef and native Coloradoan, Kevin Taylor offers Teatro guests an unparalleled choice for fine dining restaurants and entertaining in downtown Denver.
+
+For eight consecutive years, Restaurant Kevin Taylor has received the AAA Four Diamond award, the Mobil Travel Guide Four Star award, and the Wine Spectator’s Best of Award of Excellence.
+
+Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame Recipient and Travel + Leisure’s 50 Best Hotel Restaurants. Restaurant Kevin Taylor is a romantic favorite with Denver locals. Taylor calls this restaurant, “my pride and joy.”</mutableString>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jSH-P1-WKG">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="jSH-P1-WKG">
                     <rect key="frame" x="374" y="52" width="650" height="716"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="VrL-Cf-xl3"/>
+                        <outlet property="delegate" destination="-1" id="XII-94-5ZL"/>
+                    </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7KV-Ey-xTI">
-                    <rect key="frame" x="443" y="10" width="103" height="30"/>
+                    <rect key="frame" x="374" y="1" width="238" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                     <state key="normal" title="BREAKFAST">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="foodSourcePressed:" destination="-1" eventType="touchUpInside" id="Cgw-pK-gup"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hta-wy-EzB">
-                    <rect key="frame" x="648" y="10" width="103" height="30"/>
+                    <rect key="frame" x="620" y="1" width="186" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                     <state key="normal" title="LUNCH">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="foodSourcePressed:" destination="-1" eventType="touchUpInside" id="8JK-Ua-E7f"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DPh-Ld-Y8O">
-                    <rect key="frame" x="855" y="10" width="103" height="30"/>
+                    <rect key="frame" x="814" y="1" width="210" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                     <state key="normal" title="DINNER">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="foodSourcePressed:" destination="-1" eventType="touchUpInside" id="R5d-J3-d7Q"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

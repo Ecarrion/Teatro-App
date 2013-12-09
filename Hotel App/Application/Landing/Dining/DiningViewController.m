@@ -7,8 +7,9 @@
 //
 
 #import "DiningViewController.h"
+#import "FoodCell.h"
 
-@interface DiningViewController ()
+@interface DiningViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -27,6 +28,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self foodSourcePressed:self.segmentedButtons.firstObject];
+    [foodTableView registerNib:[UINib nibWithNibName:@"FoodCell" bundle:nil] forCellReuseIdentifier:@"FoodCell"];
 }
 
 #pragma mark - IBAction
@@ -34,6 +38,49 @@
 - (IBAction)backPressed:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - IBAction
+
+- (IBAction)foodSourcePressed:(id)sender {
+    
+    for (UIButton * but  in self.segmentedButtons) {
+        but.highlighted = NO;
+        
+        if (but == sender) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                but.highlighted = YES;
+            });
+        }
+    }
+}
+
+
+#pragma mark - TableView Delegate
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 10;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString * cellID = @"FoodCell";
+    FoodCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    [cell prepareForReuse];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.iconView.image = [UIImage imageNamed:[NSString stringWithFormat:@"food%d.png", indexPath.row % 6 + 1]];
+    cell.dishLabel.text = @"Something";
+    cell.dishDescriptionLabel.text = @"More Something More Something More Something More Something More Something More Something More Something More Something More Something More Something";
+    
+    return cell;
 }
 
 
