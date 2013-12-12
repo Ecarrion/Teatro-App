@@ -51,11 +51,11 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r3k-ew-sql" userLabel="Label - Description">
                     <rect key="frame" x="29" y="376" width="315" height="366"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <mutableString key="text">Award-winning chef and native Coloradoan, Kevin Taylor offers Teatro guests an unparalleled choice for fine dining restaurants and entertaining in downtown Denver.
+                    <string key="text">Award-winning chef and native Coloradoan, Kevin Taylor offers Teatro guests an unparalleled choice for fine dining restaurants and entertaining in downtown Denver.
 
 For eight consecutive years, Restaurant Kevin Taylor has received the AAA Four Diamond award, the Mobil Travel Guide Four Star award, and the Wine Spectator’s Best of Award of Excellence.
 
-Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame Recipient and Travel + Leisure’s 50 Best Hotel Restaurants. Restaurant Kevin Taylor is a romantic favorite with Denver locals. Taylor calls this restaurant, “my pride and joy.”</mutableString>
+Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame Recipient and Travel + Leisure’s 50 Best Hotel Restaurants. Restaurant Kevin Taylor is a romantic favorite with Denver locals. Taylor calls this restaurant, “my pride and joy.”</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

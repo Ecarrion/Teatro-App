@@ -73,6 +73,8 @@
 		26A20663183C757B00568A67 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A2065F183C757B00568A67 /* Default-Landscape@2x.png */; };
 		26A20664183C757B00568A67 /* gray-burry.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A20660183C757B00568A67 /* gray-burry.png */; };
 		26A20665183C757B00568A67 /* gray-burry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A20661183C757B00568A67 /* gray-burry@2x.png */; };
+		26C475F71859661600DC99E7 /* dining.json in Resources */ = {isa = PBXBuildFile; fileRef = 26C475F51859661600DC99E7 /* dining.json */; };
+		26C475FA1859679800DC99E7 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C475F91859679800DC99E7 /* Dish.m */; };
 		26F42BD4184D6C58003E3791 /* close_desc_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BCE184D6C58003E3791 /* close_desc_button.png */; };
 		26F42BD5184D6C58003E3791 /* close_desc_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BCF184D6C58003E3791 /* close_desc_button@2x.png */; };
 		26F42BD6184D6C58003E3791 /* open_desc_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F42BD0184D6C58003E3791 /* open_desc_button.png */; };
@@ -200,6 +202,9 @@
 		26A2065F183C757B00568A67 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x.png"; sourceTree = "<group>"; };
 		26A20660183C757B00568A67 /* gray-burry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-burry.png"; sourceTree = "<group>"; };
 		26A20661183C757B00568A67 /* gray-burry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-burry@2x.png"; sourceTree = "<group>"; };
+		26C475F61859661600DC99E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/dining.json; sourceTree = "<group>"; };
+		26C475F81859679800DC99E7 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dish.h; sourceTree = "<group>"; };
+		26C475F91859679800DC99E7 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dish.m; sourceTree = "<group>"; };
 		26F42BCE184D6C58003E3791 /* close_desc_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_desc_button.png; sourceTree = "<group>"; };
 		26F42BCF184D6C58003E3791 /* close_desc_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_desc_button@2x.png"; sourceTree = "<group>"; };
 		26F42BD0184D6C58003E3791 /* open_desc_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = open_desc_button.png; sourceTree = "<group>"; };
@@ -324,6 +329,7 @@
 				267ADA0F1839BF460053D94C /* InfoPlist.strings */,
 				267ADA121839BF460053D94C /* main.m */,
 				267ADA141839BF460053D94C /* Hotel App-Prefix.pch */,
+				26C475F51859661600DC99E7 /* dining.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -426,6 +432,8 @@
 				26F42BF5184D838E003E3791 /* FoursquareManager.m */,
 				26F42BF7184D8633003E3791 /* CityLocation.h */,
 				26F42BF8184D8633003E3791 /* CityLocation.m */,
+				26C475F81859679800DC99E7 /* Dish.h */,
+				26C475F91859679800DC99E7 /* Dish.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -613,6 +621,7 @@
 				2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */,
 				26F42BEB184D771E003E3791 /* back@2x.png in Resources */,
 				26F42BD9184D6C58003E3791 /* hotel-icon@2x.png in Resources */,
+				26C475F71859661600DC99E7 /* dining.json in Resources */,
 				26A20665183C757B00568A67 /* gray-burry@2x.png in Resources */,
 				268DA547185546670096F376 /* food6@2x.png in Resources */,
 				2642A9871848580100A830EE /* clock-date-background@2x.png in Resources */,
@@ -691,6 +700,7 @@
 				263DD11618502AC700A891CC /* HOAnotationView.m in Sources */,
 				267ADA661839D3FF0053D94C /* AFURLRequestSerialization.m in Sources */,
 				267ADA691839D3FF0053D94C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				26C475FA1859679800DC99E7 /* Dish.m in Sources */,
 				267ADA6F1839D3FF0053D94C /* UIWebView+AFNetworking.m in Sources */,
 				267ADA681839D3FF0053D94C /* AFURLSessionManager.m in Sources */,
 				267ADA391839C4130053D94C /* LockscreenViewController.m in Sources */,
@@ -731,6 +741,14 @@
 				267ADA291839BF460053D94C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		26C475F51859661600DC99E7 /* dining.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26C475F61859661600DC99E7 /* en */,
+			);
+			name = dining.json;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

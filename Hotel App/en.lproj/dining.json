@@ -1,0 +1,73 @@
+{
+    "breakfast": [
+                  {
+                  "dish_name": "Crisp Seasonal Vegetable Crudité",
+                  "dish_description": "Served with Fresh House Dips",
+                  "dish_price": 8
+                  },
+                  {
+                  "dish_name": "Domestic Cheese Display",
+                  "dish_description": "Served with Gourmet Crackers and Seasonal Fruit ",
+                  "dish_price": 9.5
+                  },
+                  {
+                  "dish_name": "Deluxe Imported Artisan Cheese Selection",
+                  "dish_description": "Served with Seasonal Fruit, Gourmet Crackers and Parmesan Crisps ",
+                  "dish_price": 12
+                  },
+                  {
+                  "dish_name": "Mediterranean Display",
+                  "dish_description": "Cured Meats, Artisanal Cheese, Marinated Artichoke Hearts, Roasted Red Peppers, Almonds, Marinated Olive Assortment, Grilled Bread and Crackers",
+                  "dish_price": 16
+                  },
+                  {
+                  "dish_name": "Smoked Side of Atlantic Salmon ",
+                  "dish_description": "Served with Gourmet Crackers, Crostini, Chopped Hardboiled Egg, Diced Red Onion, Capers, Diced Red Peppers & Mascarpone Crème Fraiche",
+                  "dish_price": 16
+                  },
+                  {
+                  "dish_name": "Iced Seafood Display",
+                  "dish_description": "With Jumbo Shrimp, Snow Crab Claws and Fresh Oysters Served with Fresh Horseradish Cocktail Sauce, Sliced Lemons and Champagne Mignonette",
+                  "dish_price": 22
+                  },
+                  {
+                  "dish_name": "Sliced Roast Black Angus Tenderloin of Beef Sandwiches",
+                  "dish_description": "Sliced Roast Black Angus Tenderloin of Beef Sandwiches Served on Baguette with Horseradish Dressing, Sliced Tomatoes, Red Onion & Pommery Mustard",
+                  "dish_price": 16
+                  }
+                  ],
+    "lunch": [
+              {
+              "dish_name": "High Tea",
+              "dish_description": "Smoked Salmon with Mascarpone Crème Fraiche. Marinated Sliced Cucumber with Balsamico. Prosciutto and Arugula, Melon, Shaved Grana. Fresh Mozzarella, Roma Tomato, Ciabatta. Fresh Baked Scones, Cookies and Fruit Breads with Fresh Cream and Preserves. Handmade Petit Fours, Truffles and Macaroons. Tea Assortment, served with Cream, Honey and Lemon.",
+              "dish_price": 28
+              },
+              {
+              "dish_name": "Milan Brunch",
+              "dish_description": "Sliced Fresh Fruit and Berries. Low Fat Vanilla Yogurt with Honey. Bagels, Fresh-Baked Pastries, Cinnamon Rolls and Sticky Buns. Smoked Salmon, Chopped Egg, Capers and Mascarpone Crème Fraiche. Warm Caprese Salad with Roasted Tomatoes and Basil. Apple Sausage. Tuaca Brioche French Toast with Warm Maple Syrup. Herb Roasted Breakfast Potatoes. Mixed Salad of Lettuces and Herbs with Sherry Vinaigrette. Prima Chopped Salad with Roast Peppers, Asparagus, Crispy Onions, Parmesan Vinaigrette. Illy Caffè Coffee and Gourmet Tea Assortment, served with Cream, Honey and Lemon. Assorted Fruit Juices.",
+              "dish_price": 38
+              },
+              {
+              "dish_name": "Tuscan Brunch",
+              "dish_description": "Sliced Seasonal Fruit and Berries. Fresh-Baked Muffins, Fruit Breads and Pastries. Soft Scrambled Eggs with Tomato, Fresh mozzarella. Herb Roasted Breakfast Potatoes. Pecan Wood Smoked Bacon and Apple Sausage. Charbroiled Salmon Filets. Steamed Asparagus with Lemon Butter. Grilled Chicken Salad with Crisp Pancetta, Gorgonzola, Avocado and Anchovy Vinaigrette. Illy Caffè Coffee and Tea Assortment, served with Cream, Honey and Lemon. Assorted Fruit Juices.",
+              "dish_price": 44
+              }
+              ],
+    "dinner": [
+               {
+               "dish_name": "Florentine Pasta Buffet",
+               "dish_description": "Artisan Cheese Display. Chef’s Antipasti. Mixed Greens with Herbs, Tomatoes and Balsamic Vinaigrette. Warm Pasta Salad with Shrimp, Zucchini, Wild Mushrooms, Tomato Cream Sauce. Homemade Rigatoni, San Marzano Tomato Sauce, Pecorino. Steamed Asparagus with Lemon Butter. Assortment of Fresh Bread & Butter. Assortment of Homemade Desserts.",
+               "dish_price": 33
+               },
+               {
+               "dish_name": "Mediterranean Buffet",
+               "dish_description": "Chopped Caesar Salad with Romaine, Croutons, Parmesan. Prima Cobb Salad “deconstructed”. Fresh Mozzarella, Grape Tomato, Basil with Arugula Salad, Basil Oil. Chilled Pasta Salad with Prosciutto, Goat Cheese, Cherry Tomatoes with Creamy Basil Dressing. Sliced Seared Ahi Tuna with Aioli and Greens. Chopped Marinated Grilled Chicken and Roasted Peppers with Salsa Verde. Italian Panino with Cured Meats and Cheese Antipasti: Olives, White Bean Purée, Red Peppers, Artichoke Hearts, Grilled Seasonal Vegetables. Artisan Cheese Display with Gourmet Crackers and Homemade Crostini. Assortment of Fresh Bread & Butter. Assortment of Homemade Desserts. Iced Tea and Lemonade.",
+               "dish_price": 35
+               },
+               {
+               "dish_name": "Tuscany Buffet",
+               "dish_description": "Mixed Greens with Goats Cheese, Tomato, Lemon Drop Vin. Grilled Tuna with Aioli and Greens. Pommery Mustard Roasted Pork Loin with Charred Onion and Jus. Warm Chicken Pasta with Roasted Peppers, Wild Mushrooms, Grape Tomatoes, Sauce Vodka. Pesto Mashed Potatoes. Grilled Seasonal Vegetables with 20-Year Balsamic. Assortment of Fresh Bread, Butter and Tapenade. Assortment of Homemade Desserts. Iced Tea and Lemonade.",
+               "dish_price": 38
+               }
+               ]
+}
