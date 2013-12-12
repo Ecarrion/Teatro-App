@@ -24,6 +24,6 @@ typedef enum {
 @property (nonatomic, assign) DishType type;
 
 - (id)initWithJsonDic:(NSDictionary *)dic;
-+(void)allDishesonCompletion:(void(^)(NSArray * breakfastDishes, NSArray * lunchDishes, NSArray * dinnerDishes))block;
++(void)allDishesOnCompletion:(void(^)(NSArray * breakfastDishes, NSArray * lunchDishes, NSArray * dinnerDishes))block;
 
 @end

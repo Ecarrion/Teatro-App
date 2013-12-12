@@ -24,16 +24,16 @@
     return self;
 }
 
-+(void)allDishesonCompletion:(void(^)(NSArray * breakfastDishes, NSArray * lunchDishes, NSArray * dinnerDishes))block {
++(void)allDishesOnCompletion:(void(^)(NSArray * breakfastDishes, NSArray * lunchDishes, NSArray * dinnerDishes))block {
     
     NSString * filePath = [[NSBundle mainBundle] pathForResource:@"dining" ofType:@"json"];
     NSData * data = [NSData dataWithContentsOfFile:filePath];
     NSDictionary * diningDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
     
-    NSMutableArray * mutableBreakfast = nil;
-    NSMutableArray * mutableLunch = nil;
-    NSMutableArray * mutableDinner = nil;
+    NSMutableArray * mutableBreakfast = [NSMutableArray array];
+    NSMutableArray * mutableLunch = [NSMutableArray array];
+    NSMutableArray * mutableDinner = [NSMutableArray array];
     
     if (diningDic) {
         

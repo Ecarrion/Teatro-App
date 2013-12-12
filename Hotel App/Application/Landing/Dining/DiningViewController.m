@@ -8,8 +8,14 @@
 
 #import "DiningViewController.h"
 #import "FoodCell.h"
+#import "Dish.h"
 
-@interface DiningViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DiningViewController () <UITableViewDataSource, UITableViewDelegate> {
+    
+    FoodType currentFoodSection;
+}
+
+@property (nonatomic, strong) NSArray * breakfastFishes, * lunchDishes, * diningDishes;
 
 @end
 
@@ -31,6 +37,17 @@
     
     [self foodSourcePressed:self.segmentedButtons.firstObject];
     [foodTableView registerNib:[UINib nibWithNibName:@"FoodCell" bundle:nil] forCellReuseIdentifier:@"FoodCell"];
+    
+    
+    [Dish allDishesOnCompletion:^(NSArray *breakfastDishes, NSArray *lunchDishes, NSArray *dinnerDishes) {
+       
+        self.breakfastFishes = breakfastDishes;
+        self.lunchDishes = lunchDishes;
+        self.diningDishes = dinnerDishes;
+        
+        [foodTableView reloadData];
+        
+    }];
 }
 
 #pragma mark - IBAction
@@ -45,15 +62,21 @@
 
 - (IBAction)foodSourcePressed:(id)sender {
     
-    for (UIButton * but  in self.segmentedButtons) {
+    
+    [self.segmentedButtons enumerateObjectsUsingBlock:^(UIButton * but, NSUInteger idx, BOOL *stop) {
+        
         but.highlighted = NO;
         
         if (but == sender) {
+            currentFoodSection = idx;
             dispatch_async(dispatch_get_main_queue(), ^{
                 but.highlighted = YES;
             });
         }
-    }
+    }];
+    
+    
+    [foodTableView reloadData];
 }
 
 
@@ -66,7 +89,30 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    int retVal = 0;
+    
+    switch (currentFoodSection) {
+        
+        case kBreakfast: {
+            retVal = self.breakfastFishes.count;
+            break;
+        }
+            
+        case kLunch: {
+            retVal = self.lunchDishes.count;
+            break;
+        }
+            
+        case kDinner: {
+            retVal = self.diningDishes.count;
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    return retVal;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,8 +123,36 @@
     [cell prepareForReuse];
     cell.backgroundColor = [UIColor clearColor];
     cell.iconView.image = [UIImage imageNamed:[NSString stringWithFormat:@"food%d.png", indexPath.row % 6 + 1]];
-    cell.dishLabel.text = @"Something";
-    cell.dishDescriptionLabel.text = @"More Something More Something More Something More Something More Something More Something More Something More Something More Something More Something";
+    
+    Dish * dish = nil;
+    switch (currentFoodSection) {
+            
+        case kBreakfast: {
+            dish = self.breakfastFishes[indexPath.row];
+            break;
+        }
+            
+        case kLunch: {
+            dish = self.lunchDishes[indexPath.row];
+            break;
+        }
+            
+        case kDinner: {
+            dish = self.diningDishes[indexPath.row];
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    
+    if (dish) {
+        
+        cell.dishLabel.text = dish.name;
+        cell.dishDescriptionLabel.text = dish.description;
+    }
+    
     
     return cell;
 }
