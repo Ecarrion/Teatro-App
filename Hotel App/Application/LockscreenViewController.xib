@@ -78,7 +78,7 @@
     </objects>
     <resources>
         <image name="Default-Landscape.png" width="1024" height="768"/>
-        <image name="gray-burry.png" width="441" height="769"/>
+        <image name="gray-burry.png" width="441" height="768"/>
         <image name="separator.png" width="441" height="1"/>
     </resources>
 </document>
