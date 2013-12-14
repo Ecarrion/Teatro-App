@@ -170,7 +170,7 @@
     <resources>
         <image name="buttons-background.png" width="678" height="393"/>
         <image name="clock-date-background.png" width="244" height="51"/>
-        <image name="horizontal-blur.png" width="1024" height="393"/>
+        <image name="horizontal-blur.png" width="1024" height="394"/>
         <image name="hotel-icon.png" width="79" height="82"/>
         <image name="open_desc_button.png" width="23" height="23"/>
     </resources>

@@ -83,6 +83,54 @@
     return arrayOfArrayOfLocations.count;
 }
 
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 60;
+}
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 60)];
+    
+    UILabel * title = [[UILabel alloc] initWithFrame:header.bounds];
+    title.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:30];
+    title.textColor = [UIColor whiteColor];
+    title.textAlignment = NSTextAlignmentCenter;
+    
+    [header addSubview:title];
+    
+    switch (section) {
+            
+        case kRestaurant: {
+            title.text = @"Restaurant";
+            break;
+        }
+            
+        case kBar: {
+            title.text = @"Bar";
+            break;
+        }
+            
+        case kCafe: {
+            title.text = @"Cafe";
+            break;
+        }
+            
+        case kTheater: {
+            title.text = @"Theater";
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    return header;
+    
+}
+
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     NSString * title = @"";
@@ -129,7 +177,17 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        cell.backgroundColor = [UIColor clearColor];
+        
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.detailTextLabel.textColor = [UIColor whiteColor];
+        
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
+    }
     
     CityLocation * location = arrayOfArrayOfLocations[indexPath.section][indexPath.row];
     

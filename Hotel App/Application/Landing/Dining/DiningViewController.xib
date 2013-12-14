@@ -18,6 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="right-blurry.png" id="2Zf-Z9-PSV">
+                    <rect key="frame" x="374" y="0.0" width="650" height="768"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="blurry-info-panel.png" id="KX4-Br-s51">
                     <rect key="frame" x="127" y="0.0" width="245" height="50"/>
                     <autoresizingMask key="autoresizingMask"/>
@@ -126,8 +130,9 @@ Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame R
     </objects>
     <resources>
         <image name="back.png" width="124" height="50"/>
-        <image name="blurry-info-panel.png" width="245" height="50"/>
+        <image name="blurry-info-panel.png" width="244" height="49"/>
         <image name="check.png" width="372" height="248"/>
-        <image name="left-panel.png" width="372" height="716"/>
+        <image name="left-panel.png" width="372" height="717"/>
+        <image name="right-blurry.png" width="652" height="768"/>
     </resources>
 </document>

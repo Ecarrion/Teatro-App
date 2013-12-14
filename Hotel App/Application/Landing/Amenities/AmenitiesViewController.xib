@@ -32,7 +32,7 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="302" translatesAutoresizingMaskIntoConstraints="NO" id="Bvt-T2-hlx" userLabel="Label - Description - 1">
                     <rect key="frame" x="14" y="238" width="302" height="250"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <mutableString key="text">(New!) Plantation Bath Amenities by Limited Edition
+                    <string key="text">(New!) Plantation Bath Amenities by Limited Edition
 Simmons Beautyrest BlackTM Beverly HillsTM Edition, 15″ mattress with cashmere fabric and modal yarn
 Triple sheeting
 Custom crafted furniture and headboard
@@ -44,7 +44,7 @@ Rainforest shower heads
 iPod/audio docking station
 24-hour in room dining
 Keurig in room coffee makers
-Complimentary daily local &amp; national newspaper</mutableString>
+Complimentary daily local &amp; national newspaper</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@ Complimentary daily local &amp; national newspaper</mutableString>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="302" translatesAutoresizingMaskIntoConstraints="NO" id="XLD-Td-5oD" userLabel="Label - Description - 2">
                     <rect key="frame" x="361" y="238" width="302" height="279"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <mutableString key="text">Hotel Teatro offers many meeting space options for your meeting needs.
+                    <string key="text">Hotel Teatro offers many meeting space options for your meeting needs.
 All hotel guests have access to fully renovated fitness center with free weights and cardio equipment.
 Overnight laundry and dry cleaning services.
 Complimentary Pressing and Shoe Shine Services
@@ -61,7 +61,7 @@ Transportation service to and from the Denver International Airport can be arran
 PRIMA Ristorante
 Restaurant Kevin Taylor
 Safes available at Front Desk
-Full service business center with complimentary high-speed wireless internet, computers, office supplies and fax/copy services.</mutableString>
+Full service business center with complimentary high-speed wireless internet, computers, office supplies and fax/copy services.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@ Full service business center with complimentary high-speed wireless internet, co
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="302" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-Eg-nRz" userLabel="Label - Description - 3">
                     <rect key="frame" x="722" y="238" width="302" height="316"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <mutableString key="text">Check-in by 3 p.m.
+                    <string key="text">Check-in by 3 p.m.
 Check-out by Noon
 Cancellation policy is by 12 noon, 24 hours prior to arrival
 100% NON SMOKING HOTEL
@@ -80,7 +80,7 @@ Valet parking only $16 Daily Fee/$29 Overnight
 Pets
 We look forward to providing a memorable stay for you and your pet. To ensure the comfort and enjoyment of our guests, the following policies apply to your pet’s stay:
 1. There is NO pet fee.
-2. Damage Assessment. You will be billed for any damage caused by your pet or for any extraordinary cleaning necessary after your pet’s stay.</mutableString>
+2. Damage Assessment. You will be billed for any damage caused by your pet or for any extraordinary cleaning necessary after your pet’s stay.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -114,6 +114,6 @@ We look forward to providing a memorable stay for you and your pet. To ensure th
     </objects>
     <resources>
         <image name="back.png" width="124" height="50"/>
-        <image name="horizontal-blur.png" width="1024" height="393"/>
+        <image name="horizontal-blur.png" width="1024" height="394"/>
     </resources>
 </document>

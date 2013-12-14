@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="blurry-info-panel.png" id="EXF-Q1-baF">
-                    <rect key="frame" x="127" y="0.0" width="245" height="50"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="blurry-info-panel.png" id="EXF-Q1-baF">
+                    <rect key="frame" x="127" y="-1" width="245" height="51"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="left-panel.png" id="DNW-ba-rg5">
@@ -45,21 +45,21 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lvm-2B-pex">
                     <rect key="frame" x="0.0" y="52" width="372" height="716"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="bag-fT-iXR"/>
                         <outlet property="delegate" destination="-1" id="Dhz-Hj-pa7"/>
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
     <resources>
         <image name="back.png" width="124" height="50"/>
-        <image name="blurry-info-panel.png" width="245" height="50"/>
-        <image name="left-panel.png" width="372" height="716"/>
+        <image name="blurry-info-panel.png" width="244" height="49"/>
+        <image name="left-panel.png" width="372" height="717"/>
     </resources>
 </document>
