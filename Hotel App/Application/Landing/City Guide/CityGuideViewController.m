@@ -64,7 +64,8 @@
                 [arrayOfArrayOfAnotations replaceObjectAtIndex:i withObject:anotations];
             }
             
-            [cityTableView reloadData];
+            NSIndexSet * set = [NSIndexSet indexSetWithIndex:i];
+            [cityTableView reloadSections:set withRowAnimation:UITableViewRowAnimationAutomatic];
         }];
     }
 }
