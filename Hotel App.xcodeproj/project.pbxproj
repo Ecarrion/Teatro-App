@@ -12,6 +12,7 @@
 		2604F91B1851843500CB5B81 /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2604F91A1851843500CB5B81 /* UINavigationController+Retro.m */; };
 		2604F91E1851874200CB5B81 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2604F91C1851874200CB5B81 /* check.png */; };
 		2604F91F1851874200CB5B81 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2604F91D1851874200CB5B81 /* check@2x.png */; };
+		26099B6D185E158300105B39 /* HoleyRightPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26099B6C185E158300105B39 /* HoleyRightPanelView.m */; };
 		263DD11618502AC700A891CC /* HOAnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DD11518502AC700A891CC /* HOAnotationView.m */; };
 		26416C6F185D1B4C00DBC774 /* right-blurry.png in Resources */ = {isa = PBXBuildFile; fileRef = 26416C6D185D1B4C00DBC774 /* right-blurry.png */; };
 		26416C70185D1B4C00DBC774 /* right-blurry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26416C6E185D1B4C00DBC774 /* right-blurry@2x.png */; };
@@ -116,6 +117,8 @@
 		2604F91A1851843500CB5B81 /* UINavigationController+Retro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Retro.m"; sourceTree = "<group>"; };
 		2604F91C1851874200CB5B81 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		2604F91D1851874200CB5B81 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		26099B6B185E158300105B39 /* HoleyRightPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoleyRightPanelView.h; sourceTree = "<group>"; };
+		26099B6C185E158300105B39 /* HoleyRightPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoleyRightPanelView.m; sourceTree = "<group>"; };
 		263DD11418502AC700A891CC /* HOAnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOAnotationView.h; sourceTree = "<group>"; };
 		263DD11518502AC700A891CC /* HOAnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOAnotationView.m; sourceTree = "<group>"; };
 		26416C6D185D1B4C00DBC774 /* right-blurry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-blurry.png"; sourceTree = "<group>"; };
@@ -527,6 +530,8 @@
 				268DA54818554C1D0096F376 /* FoodCell.h */,
 				268DA54918554C1D0096F376 /* FoodCell.m */,
 				268DA54B18554C320096F376 /* FoodCell.xib */,
+				26099B6B185E158300105B39 /* HoleyRightPanelView.h */,
+				26099B6C185E158300105B39 /* HoleyRightPanelView.m */,
 			);
 			path = Dining;
 			sourceTree = "<group>";
@@ -700,6 +705,7 @@
 				26F42BF0184D7D4D003E3791 /* CityGuideViewController.m in Sources */,
 				26F42BDE184D7474003E3791 /* DiningViewController.m in Sources */,
 				267ADA6A1839D3FF0053D94C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				26099B6D185E158300105B39 /* HoleyRightPanelView.m in Sources */,
 				26F42BF6184D838E003E3791 /* FoursquareManager.m in Sources */,
 				268DA54A18554C1D0096F376 /* FoodCell.m in Sources */,
 				267ADA641839D3FF0053D94C /* AFSecurityPolicy.m in Sources */,
