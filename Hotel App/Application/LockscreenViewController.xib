@@ -8,8 +8,12 @@
             <connections>
                 <outlet property="clockLabel" destination="ckS-RV-OA7" id="ecE-di-pjw"/>
                 <outlet property="dateLabel" destination="6Nn-pu-5hK" id="6dA-2E-BPs"/>
+                <outlet property="iconLabel" destination="L4E-nQ-3nZ" id="trK-zx-vfG"/>
                 <outlet property="landingSlider" destination="Ui8-59-Ihv" id="R9F-t3-tMW"/>
+                <outlet property="tem_f_label" destination="YPG-HO-gb7" id="Qmh-lo-Xex"/>
+                <outlet property="tempIconLabel" destination="L4E-nQ-3nZ" id="Jgd-vF-InA"/>
                 <outlet property="tempLabel" destination="oa7-CX-fWi" id="mhH-fh-IFm"/>
+                <outlet property="temp_c_label" destination="Jeq-du-f2a" id="auX-GJ-yE6"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -41,8 +45,8 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64 º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oa7-CX-fWi" userLabel="Label - Temp">
-                    <rect key="frame" x="328" y="266" width="368" height="82"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oa7-CX-fWi" userLabel="Label - Temp">
+                    <rect key="frame" x="437" y="270" width="171" height="76"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="85"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,6 +74,24 @@
                         <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="NC4-oV-IxK"/>
                     </connections>
                 </slider>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64º" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YPG-HO-gb7">
+                    <rect key="frame" x="638" y="272" width="47" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45º" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jeq-du-f2a">
+                    <rect key="frame" x="638" y="310" width="47" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="L4E-nQ-3nZ">
+                    <rect key="frame" x="321" y="262" width="110" height="91"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

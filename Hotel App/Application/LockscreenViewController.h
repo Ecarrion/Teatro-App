@@ -14,6 +14,11 @@
     __weak IBOutlet UILabel *tempLabel;
     __weak IBOutlet UILabel *dateLabel;
     
+    __weak IBOutlet UIImageView *iconLabel;
+    __weak IBOutlet UILabel *tem_f_label;
+    __weak IBOutlet UILabel *temp_c_label;
+    __weak IBOutlet UIImageView *tempIconLabel;
+    
     __weak IBOutlet UISlider *landingSlider;
     
 }

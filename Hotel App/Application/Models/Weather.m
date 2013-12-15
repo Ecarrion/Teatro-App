@@ -23,8 +23,12 @@
         if (response) {
             
             currentWeather = [[Weather alloc] init];
-            currentWeather.temperature = response[@"temp_c"];
-            currentWeather.weatherType = responseObject[@"weather"];
+            currentWeather.temperature = @([response[@"temp_c"] intValue]);
+            currentWeather.temperature_f = @([response[@"temp_f"] intValue]);
+            currentWeather.weatherType = response[@"weather"];
+            
+            NSString * icon = response[@"icon"];
+            [currentWeather fillImageNameInfoForIcon:icon];
         }
         
         if (block) {
@@ -38,6 +42,124 @@
         }
         
     }];
+}
+
+-(void)fillImageNameInfoForIcon:(NSString *)icon {
+    
+    if ([icon isEqualToString:@"chanceflurries"]) {
+        
+        self.iconName = @"raining_icon.png";
+        self.iconSmallName = @"raining_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"chancerain"]) {
+        
+        self.iconName = @"snow_icon.png";
+        self.iconSmallName = @"snow_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"chancesleet"]) {
+        
+        self.iconName = @"sleet_icon.png";
+        self.iconSmallName = @"sleet_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"chancesnow"]) {
+        
+        self.iconName = @"snow_icon.png";
+        self.iconSmallName = @"snow_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"chancetstorms"]) {
+        
+        self.iconName = @"raining_icon.png";
+        self.iconSmallName = @"raining_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"clear"]) {
+        
+        self.iconName = @"sunny_icon.png";
+        self.iconSmallName = @"sunny_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"cloudy"]) {
+        
+        self.iconName = @"cloudy_icon.png";
+        self.iconSmallName = @"cloudy_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"flurries"]) {
+        
+        self.iconName = @"snow_icon.png";
+        self.iconSmallName = @"snow_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"fog"]) {
+        
+        self.iconName = @"fog_icon.png";
+        self.iconSmallName = @"fog_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"hazy"]) {
+        
+        self.iconName = @"wind_icon.png";
+        self.iconSmallName = @"wind_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"mostlycloudy"]) {
+        
+        self.iconName = @"partly_cloudy_icon.png";
+        self.iconSmallName = @"partly_cloudy_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"mostlysunny"]) {
+        
+        self.iconName = @"sunny_icon.png";
+        self.iconSmallName = @"sunny_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"partlycloudy"]) {
+        
+        self.iconName = @"partly_cloudy_icon.png";
+        self.iconSmallName = @"partly_cloudy_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"partlysunny"]) {
+        
+        self.iconName = @"partly_cloudy_icon.png";
+        self.iconSmallName = @"partly_cloudy_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"sleet"]) {
+        
+        self.iconName = @"sleet_icon.png";
+        self.iconSmallName = @"sleet_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"rain"]) {
+        
+        self.iconName = @"raining_icon.png";
+        self.iconSmallName = @"raining_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"snow"]) {
+        
+        self.iconName = @"snow_icon.png";
+        self.iconSmallName = @"snow_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"sunny"]) {
+        
+        self.iconName = @"clear_icon.png";
+        self.iconSmallName = @"clear_icon_small.png";
+        
+    }
+    else if ([icon isEqualToString:@"tstorms"]) {
+        
+        self.iconName = @"raining_icon.png";
+        self.iconSmallName = @"raining_icon_small.png";
+        
+    }
 }
 
 

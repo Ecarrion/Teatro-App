@@ -41,6 +41,8 @@
     [clockFormater setDateFormat:@"H:mm"];
     
     tempLabel.text = @"";
+    temp_c_label.text = @"";
+    tem_f_label.text = @"";
     
     //Style clock label
     clockLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
@@ -55,6 +57,20 @@
     tempLabel.layer.shadowOpacity = .4;
     tempLabel.layer.shadowOffset = CGSizeZero;
     tempLabel.layer.masksToBounds = NO;
+    
+    //Style temp C label
+    temp_c_label.layer.shadowColor = [[UIColor blackColor] CGColor];
+    temp_c_label.layer.shadowRadius = 2.f;
+    temp_c_label.layer.shadowOpacity = .4;
+    temp_c_label.layer.shadowOffset = CGSizeZero;
+    temp_c_label.layer.masksToBounds = NO;
+    
+    //Style temp F label
+    tem_f_label.layer.shadowColor = [[UIColor blackColor] CGColor];
+    tem_f_label.layer.shadowRadius = 2.f;
+    tem_f_label.layer.shadowOpacity = .4;
+    tem_f_label.layer.shadowOffset = CGSizeZero;
+    tem_f_label.layer.masksToBounds = NO;
     
     [self updateTimer];
     [self updateWeather];
@@ -106,10 +122,15 @@
 
 -(void)updateWeather {
     
-    [Weather currentWeatherForLat:17.3820420 long:78.48172729999999 OnCompletion:^(Weather *weatherInfo) {
+    [Weather currentWeatherForLat:HOTEL_LATITUDE long:HOTEL_LONGITUDE OnCompletion:^(Weather *weatherInfo) {
         
         if (weatherInfo) {
-            tempLabel.text = [NSString stringWithFormat:@"%@ °", weatherInfo.temperature];
+            
+            tempLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature];
+            temp_c_label.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature];
+            tem_f_label.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
+            
+            tempIconLabel.image = [UIImage imageNamed:weatherInfo.iconName];
         }
         
     }];
