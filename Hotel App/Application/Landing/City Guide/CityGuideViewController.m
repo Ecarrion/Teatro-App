@@ -9,6 +9,7 @@
 #import "CityGuideViewController.h"
 #import "FoursquareManager.h"
 #import "HOAnotationView.h"
+#import "Weather.h"
 
 @interface CityGuideViewController () {
     
@@ -36,6 +37,24 @@
     
     [self centerMap];
     [self loadLocations];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self updateWeather];
+}
+
+-(void)updateWeather {
+    
+    [Weather currentWeatherForLat:HOTEL_LATITUDE long:HOTEL_LONGITUDE OnCompletion:^(Weather *weatherInfo) {
+        
+        if (weatherInfo) {
+            tempLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
+            tempIcon.image = [UIImage imageNamed:weatherInfo.iconSmallName];
+        }
+        
+    }];
 }
 
 -(void)loadLocations {

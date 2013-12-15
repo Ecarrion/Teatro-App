@@ -16,7 +16,7 @@
     __weak IBOutlet UILabel *description2;
     __weak IBOutlet UIButton *toggleButton;
     
-    
+    __weak IBOutlet UIImageView *tempIconImageView;
 }
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsArray;

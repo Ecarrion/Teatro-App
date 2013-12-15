@@ -126,7 +126,7 @@
         
         if (weatherInfo) {
             
-            tempLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature];
+            tempLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
             temp_c_label.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature];
             tem_f_label.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
             

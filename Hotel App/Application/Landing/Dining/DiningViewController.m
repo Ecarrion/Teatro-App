@@ -9,6 +9,7 @@
 #import "DiningViewController.h"
 #import "FoodCell.h"
 #import "Dish.h"
+#import "Weather.h"
 
 @interface DiningViewController () <UITableViewDataSource, UITableViewDelegate> {
     
@@ -46,6 +47,24 @@
         self.diningDishes = dinnerDishes;
         
         [foodTableView reloadData];
+        
+    }];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self updateWeather];
+}
+
+-(void)updateWeather {
+    
+    [Weather currentWeatherForLat:HOTEL_LATITUDE long:HOTEL_LONGITUDE OnCompletion:^(Weather *weatherInfo) {
+        
+        if (weatherInfo) {
+            tempLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
+            tempIcon.image = [UIImage imageNamed:weatherInfo.iconSmallName];
+        }
         
     }];
 }

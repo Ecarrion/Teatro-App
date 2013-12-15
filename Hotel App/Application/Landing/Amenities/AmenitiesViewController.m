@@ -7,6 +7,7 @@
 //
 
 #import "AmenitiesViewController.h"
+#import "Weather.h"
 
 @interface AmenitiesViewController ()
 
@@ -28,6 +29,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self updateWeather];
+}
+
+-(void)updateWeather {
+    
+    [Weather currentWeatherForLat:HOTEL_LATITUDE long:HOTEL_LONGITUDE OnCompletion:^(Weather *weatherInfo) {
+        
+        if (weatherInfo) {
+            tempLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
+            tempIcon.image = [UIImage imageNamed:weatherInfo.iconSmallName];
+        }
+        
+    }];
 }
 
 #pragma mark - IBAction

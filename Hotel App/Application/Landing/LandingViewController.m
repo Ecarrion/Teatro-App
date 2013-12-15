@@ -54,12 +54,12 @@
     [clockFormater setDateFormat:@"H:mm"];
     
     [self updateTimer];
-    [self updateWeather];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    [self updateWeather];
     
     NSTimeInterval todayInterval = [[NSDate date] timeIntervalSince1970]; //Today in seconds
     int remainingForMinute  = 60 - ((int)todayInterval % 60);
@@ -93,10 +93,11 @@
 
 -(void)updateWeather {
     
-    [Weather currentWeatherForLat:17.3820420 long:78.48172729999999 OnCompletion:^(Weather *weatherInfo) {
+    [Weather currentWeatherForLat:HOTEL_LATITUDE long:HOTEL_LONGITUDE OnCompletion:^(Weather *weatherInfo) {
         
         if (weatherInfo) {
-            weatherLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature];
+            weatherLabel.text = [NSString stringWithFormat:@"%@°", weatherInfo.temperature_f];
+            tempIconImageView.image = [UIImage imageNamed:weatherInfo.iconSmallName];
         }
         
     }];

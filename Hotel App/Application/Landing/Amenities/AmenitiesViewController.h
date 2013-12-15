@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AmenitiesViewController : UIViewController
+@interface AmenitiesViewController : UIViewController {
+    
+    __weak IBOutlet UIImageView *tempIcon;
+    __weak IBOutlet UILabel *tempLabel;
+    
+}
 
 @end

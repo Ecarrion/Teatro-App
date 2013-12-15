@@ -9,6 +9,7 @@
                 <outlet property="buttonContainer" destination="ePj-I5-6UH" id="FD6-zM-93R"/>
                 <outlet property="clockLabel" destination="b7C-NE-WX3" id="wYD-bf-ogW"/>
                 <outlet property="description2" destination="7na-nu-g9Q" id="V3M-dA-B23"/>
+                <outlet property="tempIconImageView" destination="6tq-Up-gYV" id="l0J-yO-b4p"/>
                 <outlet property="toggleButton" destination="0rO-ta-wgf" id="6fJ-y5-KjJ"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outlet property="weatherLabel" destination="B8p-jZ-v8r" id="opa-8C-vgg"/>
@@ -41,7 +42,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B8p-jZ-v8r">
-                    <rect key="frame" x="165" y="23" width="72" height="31"/>
+                    <rect key="frame" x="172" y="23" width="70" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,6 +161,10 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hotel-icon.png" id="0Gb-8F-OFX">
                     <rect key="frame" x="138" y="211" width="79" height="82"/>
                     <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6tq-Up-gYV">
+                    <rect key="frame" x="114" y="13" width="62" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

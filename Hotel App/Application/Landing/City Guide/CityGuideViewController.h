@@ -15,6 +15,10 @@
     __weak IBOutlet MKMapView *makView;
     __weak IBOutlet UITableView *cityTableView;
     
+    
+    __weak IBOutlet UIImageView *tempIcon;
+    __weak IBOutlet UILabel *tempLabel;
+    
 }
 
 @end

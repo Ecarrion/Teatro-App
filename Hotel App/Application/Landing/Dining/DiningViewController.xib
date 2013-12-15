@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiningViewController">
             <connections>
                 <outlet property="foodTableView" destination="jSH-P1-WKG" id="314-zn-PmA"/>
+                <outlet property="tempIcon" destination="6OR-Fp-pbK" id="xUW-ab-p07"/>
+                <outlet property="tempLabel" destination="J5P-sl-ezi" id="05s-C0-TA9"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outletCollection property="segmentedButtons" destination="7KV-Ey-xTI" id="E0W-qr-VDy"/>
                 <outletCollection property="segmentedButtons" destination="Hta-wy-EzB" id="mi2-bE-bIf"/>
@@ -129,6 +131,17 @@ Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame R
                         <action selector="foodSourcePressed:" destination="-1" eventType="touchUpInside" id="R5d-J3-d7Q"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J5P-sl-ezi">
+                    <rect key="frame" x="298" y="10" width="70" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6OR-Fp-pbK">
+                    <rect key="frame" x="240" y="0.0" width="62" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

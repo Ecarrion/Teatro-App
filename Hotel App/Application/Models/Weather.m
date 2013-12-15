@@ -9,9 +9,15 @@
 #import "Weather.h"
 #import "AFNetworking.h"
 
+static Weather * lastWeather = nil;
+
 @implementation Weather
 
 +(void)currentWeatherForLat:(double)lat long:(double)lng OnCompletion:(void (^)(Weather *))block {
+    
+    if (block && lastWeather) {
+        block(lastWeather);
+    }
     
     NSString * endPoint = [NSString stringWithFormat:@"http://api.wunderground.com/api/3b480cc6a0939128/conditions/forecast/alert/q/%f,%f.json", lat, lng];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -32,12 +38,13 @@
         }
         
         if (block) {
-            block (currentWeather);
+            lastWeather = currentWeather;
+            block (lastWeather);
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        if (block) {
+        if (lastWeather) {
             block (nil);
         }
         

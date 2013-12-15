@@ -18,8 +18,10 @@ typedef enum {
 
 @interface DiningViewController : UIViewController {
     
-    
     __weak IBOutlet UITableView *foodTableView;
+    __weak IBOutlet UILabel *tempLabel;
+    __weak IBOutlet UIImageView *tempIcon;
+    
 }
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *segmentedButtons;

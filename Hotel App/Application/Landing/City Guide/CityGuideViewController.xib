@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="cityTableView" destination="lvm-2B-pex" id="KSs-9Z-GYO"/>
                 <outlet property="makView" destination="R4S-d8-4GQ" id="ENB-Hh-NoV"/>
+                <outlet property="tempIcon" destination="h4L-OT-0wG" id="K4K-36-gzv"/>
+                <outlet property="tempLabel" destination="nwp-V0-EZz" id="OtD-2N-GwK"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -54,6 +56,17 @@
                         <outlet property="delegate" destination="-1" id="Dhz-Hj-pa7"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nwp-V0-EZz">
+                    <rect key="frame" x="299" y="9" width="70" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="h4L-OT-0wG">
+                    <rect key="frame" x="241" y="-1" width="62" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

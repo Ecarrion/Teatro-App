@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AmenitiesViewController">
             <connections>
+                <outlet property="tempIcon" destination="yH7-77-ij5" id="Kwp-cN-GgI"/>
+                <outlet property="tempLabel" destination="SLd-LC-VaR" id="DAU-7K-hw5"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -106,6 +108,21 @@ We look forward to providing a memorable stay for you and your pet. To ensure th
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="blurry-info-panel.png" translatesAutoresizingMaskIntoConstraints="NO" id="f82-1d-RkR">
+                    <rect key="frame" x="127" y="-1" width="245" height="51"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="24º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-LC-VaR">
+                    <rect key="frame" x="298" y="10" width="70" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-77-ij5">
+                    <rect key="frame" x="240" y="0.0" width="62" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -114,6 +131,7 @@ We look forward to providing a memorable stay for you and your pet. To ensure th
     </objects>
     <resources>
         <image name="back.png" width="124" height="50"/>
+        <image name="blurry-info-panel.png" width="244" height="49"/>
         <image name="horizontal-blur.png" width="1024" height="394"/>
     </resources>
 </document>
