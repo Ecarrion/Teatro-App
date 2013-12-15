@@ -89,6 +89,11 @@
     return 60;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 77;
+}
+
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
@@ -187,6 +192,11 @@
         
         cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
         cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
+        
+        UIView * selectedView = [[UIView alloc] initWithFrame:cell.bounds];
+        selectedView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        cell.selectedBackgroundView = selectedView;
+
     }
     
     CityLocation * location = arrayOfArrayOfLocations[indexPath.section][indexPath.row];
