@@ -13,6 +13,7 @@
     __weak IBOutlet UIImageView *tempIcon;
     __weak IBOutlet UILabel *tempLabel;
     
+    __weak IBOutlet UILabel *clockLabel;
 }
 
 @end

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityGuideViewController">
             <connections>
                 <outlet property="cityTableView" destination="lvm-2B-pex" id="KSs-9Z-GYO"/>
+                <outlet property="clockLabel" destination="tTK-5N-tmU" id="g3z-q0-mNX"/>
                 <outlet property="makView" destination="R4S-d8-4GQ" id="ENB-Hh-NoV"/>
                 <outlet property="tempIcon" destination="h4L-OT-0wG" id="K4K-36-gzv"/>
                 <outlet property="tempLabel" destination="nwp-V0-EZz" id="OtD-2N-GwK"/>
@@ -67,6 +68,13 @@
                     <rect key="frame" x="241" y="-1" width="62" height="51"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tTK-5N-tmU">
+                    <rect key="frame" x="144" y="9" width="85" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

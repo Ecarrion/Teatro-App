@@ -12,8 +12,6 @@
 
 @interface LockscreenViewController () {
     
-    NSDateFormatter * clockFormater;
-    NSTimer * clockTimer;
     NSDateFormatter * dateFormatter;
 }
 
@@ -36,9 +34,6 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    clockFormater = [[NSDateFormatter alloc] init];
-    [clockFormater setDateFormat:@"H:mm"];
     
     tempLabel.text = @"";
     temp_c_label.text = @"";
@@ -72,43 +67,23 @@
     tem_f_label.layer.shadowOffset = CGSizeZero;
     tem_f_label.layer.masksToBounds = NO;
     
-    [self updateTimer];
+    [self setTime:current_time()];
     [self updateWeather];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
-    NSTimeInterval todayInterval = [[NSDate date] timeIntervalSince1970]; //Today in seconds
-    int remainingForMinute  = 60 - ((int)todayInterval % 60);
-    
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(remainingForMinute * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        
-        [clockTimer invalidate];
-        clockTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-        [self updateTimer];
-        
-    });
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     
     [super viewWillDisappear:animated];
-    
-    [clockTimer invalidate];
-    clockTimer = nil;
 }
 
-
--(void)updateTimer {
+-(void)setTime:(NSString *)time {
     
-    //Clock
-    NSString * dateStr = [clockFormater stringFromDate:[NSDate date]];
-    clockLabel.text = dateStr;
-    
+    clockLabel.text = time;
     
     //Date
     if (!dateFormatter) {
@@ -117,7 +92,6 @@
     }
     
     dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
-    
 }
 
 -(void)updateWeather {
@@ -173,12 +147,6 @@
     }
     
     //Clean rest of resources here eg:arrays, maps, dictionaries, etc
-}
-
--(void)dealloc {
-    
-    [clockTimer invalidate];
-    clockTimer = nil;
 }
 
 @end

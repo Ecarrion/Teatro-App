@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiningViewController">
             <connections>
+                <outlet property="clockLabel" destination="V4d-vP-gPg" id="JEQ-53-Mvv"/>
                 <outlet property="foodTableView" destination="jSH-P1-WKG" id="314-zn-PmA"/>
                 <outlet property="tempIcon" destination="6OR-Fp-pbK" id="xUW-ab-p07"/>
                 <outlet property="tempLabel" destination="J5P-sl-ezi" id="05s-C0-TA9"/>
@@ -142,6 +143,13 @@ Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame R
                     <rect key="frame" x="240" y="0.0" width="62" height="51"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V4d-vP-gPg">
+                    <rect key="frame" x="140" y="10" width="85" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

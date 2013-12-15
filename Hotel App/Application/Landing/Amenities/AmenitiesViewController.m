@@ -29,6 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    tempLabel.text = @"";
+    [self setTime:current_time()];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -47,6 +50,11 @@
         }
         
     }];
+}
+
+-(void)setTime:(NSString *)time {
+    
+    clockLabel.text = time;
 }
 
 #pragma mark - IBAction

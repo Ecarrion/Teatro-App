@@ -10,10 +10,18 @@
 #import "LockscreenViewController.h"
 #import "LandingViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    
+    NSTimer * clockTimer;
+    NSDateFormatter * clockFormater;
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Clock
+    clockFormater = [[NSDateFormatter alloc] init];
+    [clockFormater setDateFormat:@"H:mm"];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -40,6 +48,9 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    [clockTimer invalidate];
+    clockTimer = nil;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -62,11 +73,49 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    NSTimeInterval todayInterval = [[NSDate date] timeIntervalSince1970]; //Today in seconds
+    int remainingForMinute  = 60 - ((int)todayInterval % 60);
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(remainingForMinute * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        [clockTimer invalidate];
+        clockTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(deliverTimeToApp) userInfo:nil repeats:YES];
+        [self deliverTimeToApp];
+        
+    });
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+-(void)deliverTimeToApp {
+    
+    UIViewController * controller = [[(UINavigationController *)self.window.rootViewController viewControllers] lastObject];
+    
+    SEL setTimeSelector = NSSelectorFromString(@"setTime:");
+    if ([controller respondsToSelector:setTimeSelector]) {
+        [controller performSelector:setTimeSelector withObject:[self currentTime]];
+    }
+    
+    controller = self.window.rootViewController.presentedViewController;
+    if (controller) {
+        if ([controller respondsToSelector:setTimeSelector]) {
+            [controller performSelector:setTimeSelector withObject:[self currentTime]];
+        }
+    }
+}
+#pragma clang diagnostic pop
+
+-(NSString *)currentTime {
+    
+    return [clockFormater stringFromDate:[NSDate date]];
 }
 
 @end

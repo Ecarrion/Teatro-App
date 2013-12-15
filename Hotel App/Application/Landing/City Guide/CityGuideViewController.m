@@ -37,12 +37,20 @@
     
     [self centerMap];
     [self loadLocations];
+    
+    tempLabel.text = @"";
+    [self setTime:current_time()];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     [self updateWeather];
+}
+
+-(void)setTime:(NSString *)time {
+    
+    clockLabel.text = time;
 }
 
 -(void)updateWeather {

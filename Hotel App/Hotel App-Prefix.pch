@@ -13,8 +13,13 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "AppDelegate.h"
 #endif
 
 
 #define HOTEL_LATITUDE 39.746233
 #define HOTEL_LONGITUDE -104.998361
+
+
+#define APP_DELEGATE (AppDelegate *)[[UIApplication sharedApplication] delegate]
+#define current_time() [APP_DELEGATE currentTime]

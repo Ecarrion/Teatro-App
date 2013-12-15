@@ -39,6 +39,8 @@
     [self foodSourcePressed:self.segmentedButtons.firstObject];
     [foodTableView registerNib:[UINib nibWithNibName:@"FoodCell" bundle:nil] forCellReuseIdentifier:@"FoodCell"];
     
+    tempLabel.text = @"";
+    [self setTime:current_time()];
     
     [Dish allDishesOnCompletion:^(NSArray *breakfastDishes, NSArray *lunchDishes, NSArray *dinnerDishes) {
        
@@ -67,6 +69,11 @@
         }
         
     }];
+}
+
+-(void)setTime:(NSString *)time {
+    
+    clockLabel.text = time;
 }
 
 #pragma mark - IBAction

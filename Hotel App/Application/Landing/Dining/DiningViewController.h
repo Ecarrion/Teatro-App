@@ -21,6 +21,8 @@ typedef enum {
     __weak IBOutlet UITableView *foodTableView;
     __weak IBOutlet UILabel *tempLabel;
     __weak IBOutlet UIImageView *tempIcon;
+    __weak IBOutlet UILabel *clockLabel;
+    
     
 }
 
