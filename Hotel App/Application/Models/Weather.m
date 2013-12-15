@@ -10,6 +10,9 @@
 #import "AFNetworking.h"
 
 static Weather * lastWeather = nil;
+static NSTimeInterval lastUpdatedTimeInterval = 0;
+
+#define MINUMUN_TIME_TO_NEXT_CALL 3600
 
 @implementation Weather
 
@@ -17,6 +20,12 @@ static Weather * lastWeather = nil;
     
     if (block && lastWeather) {
         block(lastWeather);
+    }
+    
+    //Check if the last call was less than one hour ago for preventing api over usage
+    NSTimeInterval currentInterval = [[NSDate date] timeIntervalSince1970];
+    if (currentInterval - lastUpdatedTimeInterval < MINUMUN_TIME_TO_NEXT_CALL) {
+        return;
     }
     
     NSString * endPoint = [NSString stringWithFormat:@"http://api.wunderground.com/api/3b480cc6a0939128/conditions/forecast/alert/q/%f,%f.json", lat, lng];
@@ -38,8 +47,11 @@ static Weather * lastWeather = nil;
         }
         
         if (block) {
+            
             lastWeather = currentWeather;
+            lastUpdatedTimeInterval = [[NSDate date] timeIntervalSince1970];
             block (lastWeather);
+            
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
