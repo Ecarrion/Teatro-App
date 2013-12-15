@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define TOP_CELL_SPACING 32
+#define BOTTOM_CELL_SPACING 4
+#define CELL_MINIMUN_HEIGHT 124
+#define CELL_DESCRIPTION_FONT [UIFont fontWithName:@"HelveticaNeue" size:16]
+#define CELL_DESCRIPTION_MAX_SIZE CGSizeMake (461, 9999)
+#define CELL_DESCRIPTION_STANDAD_RECT CGRectMake (181, 32, 461, 86)
+
+
 @interface FoodCell : UITableViewCell
 
 

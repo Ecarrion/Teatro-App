@@ -66,12 +66,11 @@
     [self.segmentedButtons enumerateObjectsUsingBlock:^(UIButton * but, NSUInteger idx, BOOL *stop) {
         
         but.highlighted = NO;
+        but.backgroundColor = [UIColor clearColor];
         
         if (but == sender) {
             currentFoodSection = idx;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                but.highlighted = YES;
-            });
+            but.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
         }
     }];
     
@@ -115,6 +114,46 @@
     return retVal;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Dish * dish = nil;
+    switch (currentFoodSection) {
+            
+        case kBreakfast: {
+            dish = self.breakfastFishes[indexPath.row];
+            break;
+        }
+            
+        case kLunch: {
+            dish = self.lunchDishes[indexPath.row];
+            break;
+        }
+            
+        case kDinner: {
+            dish = self.diningDishes[indexPath.row];
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    int height = 0;
+    if (dish) {
+        
+        NSString * text = [dish.description stringByAppendingFormat:@"  %@ USD", dish.price];
+        
+        height = [text boundingRectWithSize:CELL_DESCRIPTION_MAX_SIZE options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : CELL_DESCRIPTION_FONT} context:nil].size.height;
+        height += TOP_CELL_SPACING + BOTTOM_CELL_SPACING;
+        
+        if (height < CELL_MINIMUN_HEIGHT) {
+            height = CELL_MINIMUN_HEIGHT;
+        }
+    }
+    
+    return height;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString * cellID = @"FoodCell";
@@ -150,7 +189,10 @@
     if (dish) {
         
         cell.dishLabel.text = dish.name;
-        cell.dishDescriptionLabel.text = dish.description;
+        cell.dishDescriptionLabel.text = [dish.description stringByAppendingFormat:@"  %@ USD", dish.price];
+        cell.dishDescriptionLabel.frame = CELL_DESCRIPTION_STANDAD_RECT;
+        [cell.dishDescriptionLabel sizeToFit];
+        
     }
     
     

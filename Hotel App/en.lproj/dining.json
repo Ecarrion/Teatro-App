@@ -2,37 +2,37 @@
     "breakfast": [
                   {
                   "dish_name": "Crisp Seasonal Vegetable Crudité",
-                  "dish_description": "Served with Fresh House Dips",
+                  "dish_description": "Served with Fresh House Dips.",
                   "dish_price": 8
                   },
                   {
                   "dish_name": "Domestic Cheese Display",
-                  "dish_description": "Served with Gourmet Crackers and Seasonal Fruit ",
+                  "dish_description": "Served with Gourmet Crackers and Seasonal Fruit.",
                   "dish_price": 9.5
                   },
                   {
                   "dish_name": "Deluxe Imported Artisan Cheese Selection",
-                  "dish_description": "Served with Seasonal Fruit, Gourmet Crackers and Parmesan Crisps ",
+                  "dish_description": "Served with Seasonal Fruit, Gourmet Crackers and Parmesan Crisps.",
                   "dish_price": 12
                   },
                   {
                   "dish_name": "Mediterranean Display",
-                  "dish_description": "Cured Meats, Artisanal Cheese, Marinated Artichoke Hearts, Roasted Red Peppers, Almonds, Marinated Olive Assortment, Grilled Bread and Crackers",
+                  "dish_description": "Cured Meats, Artisanal Cheese, Marinated Artichoke Hearts, Roasted Red Peppers, Almonds, Marinated Olive Assortment, Grilled Bread and Crackers.",
                   "dish_price": 16
                   },
                   {
                   "dish_name": "Smoked Side of Atlantic Salmon ",
-                  "dish_description": "Served with Gourmet Crackers, Crostini, Chopped Hardboiled Egg, Diced Red Onion, Capers, Diced Red Peppers & Mascarpone Crème Fraiche",
+                  "dish_description": "Served with Gourmet Crackers, Crostini, Chopped Hardboiled Egg, Diced Red Onion, Capers, Diced Red Peppers & Mascarpone Crème Fraiche.",
                   "dish_price": 16
                   },
                   {
                   "dish_name": "Iced Seafood Display",
-                  "dish_description": "With Jumbo Shrimp, Snow Crab Claws and Fresh Oysters Served with Fresh Horseradish Cocktail Sauce, Sliced Lemons and Champagne Mignonette",
+                  "dish_description": "With Jumbo Shrimp, Snow Crab Claws and Fresh Oysters Served with Fresh Horseradish Cocktail Sauce, Sliced Lemons and Champagne Mignonette.",
                   "dish_price": 22
                   },
                   {
                   "dish_name": "Sliced Roast Black Angus Tenderloin of Beef Sandwiches",
-                  "dish_description": "Sliced Roast Black Angus Tenderloin of Beef Sandwiches Served on Baguette with Horseradish Dressing, Sliced Tomatoes, Red Onion & Pommery Mustard",
+                  "dish_description": "Sliced Roast Black Angus Tenderloin of Beef Sandwiches Served on Baguette with Horseradish Dressing, Sliced Tomatoes, Red Onion & Pommery Mustard.",
                   "dish_price": 16
                   }
                   ],
