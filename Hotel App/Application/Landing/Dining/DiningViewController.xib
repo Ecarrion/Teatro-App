@@ -71,6 +71,11 @@ Other major awards include: Nation Restaurant News’ Fine Dining Hall of Fame R
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="7Cs-zU-Zif">
+                        <rect key="frame" x="0.0" y="716" width="650" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="VrL-Cf-xl3"/>
                         <outlet property="delegate" destination="-1" id="XII-94-5ZL"/>
