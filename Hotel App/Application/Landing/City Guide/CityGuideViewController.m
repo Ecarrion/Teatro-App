@@ -132,6 +132,8 @@
     title.textColor = [UIColor whiteColor];
     title.textAlignment = NSTextAlignmentCenter;
     
+    tableView.separatorColor = [[UIColor alloc] initWithRed:1.0 green:1.0 blue:1.0 alpha:0.25];
+    
     [header addSubview:title];
     
     switch (section) {
