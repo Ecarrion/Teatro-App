@@ -15,6 +15,9 @@
     
     NSMutableArray * arrayOfArrayOfLocations;
     NSMutableArray * arrayOfArrayOfAnotations;
+    
+    BOOL inCategories;
+    CityObjectType currentCategory;
 }
 
 @end
@@ -35,6 +38,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    cityTableView.separatorColor = [[UIColor alloc] initWithRed:1.0 green:1.0 blue:1.0 alpha:0.25];
+    
+    inCategories  = YES;
     [self centerMap];
     [self loadLocations];
     
@@ -90,9 +96,10 @@
                 
                 [arrayOfArrayOfAnotations replaceObjectAtIndex:i withObject:anotations];
             }
-            
-            NSIndexSet * set = [NSIndexSet indexSetWithIndex:i];
-            [cityTableView reloadSections:set withRowAnimation:UITableViewRowAnimationAutomatic];
+            if (!inCategories && currentCategory == i) {
+                NSIndexSet * set = [NSIndexSet indexSetWithIndex:0];
+                [cityTableView reloadSections:set withRowAnimation:UITableViewRowAnimationAutomatic];
+            }
         }];
     }
 }
@@ -108,22 +115,34 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return arrayOfArrayOfLocations.count;
+    return 1;
 }
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+    if (!inCategories) {
+        return 60;
+    }
     
-    return 60;
+    return 0;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (inCategories) {
+        return 60;
+    }
     
     return 77;
 }
 
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    if (inCategories)
+        return nil;
+    
     
     UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 60)];
     
@@ -136,7 +155,7 @@
     
     [header addSubview:title];
     
-    switch (section) {
+    switch (currentCategory) {
             
         case kRestaurant: {
             title.text = @"Restaurant";
@@ -166,84 +185,121 @@
     
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    NSString * title = @"";
-    
-    switch (section) {
-            
-        case kRestaurant: {
-            title = @"Restaurant";
-            break;
-        }
-            
-        case kBar: {
-            title = @"Bar";
-            break;
-        }
-            
-        case kCafe: {
-            title = @"Cafe";
-            break;
-        }
-            
-        case kTheater: {
-            title = @"Theater";
-            break;
-        }
-            
-        default:
-            break;
-    }
-    
-    return title;
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSUInteger number = 0;
-    
-    if (arrayOfArrayOfAnotations[section] != [NSNull null]) {
-        number = [arrayOfArrayOfLocations[section] count];
+    if (inCategories) {
+        
+        return 4;
+        
+    } else {
+        
+        NSUInteger number = 0;
+        
+        if (arrayOfArrayOfAnotations[currentCategory] != [NSNull null]) {
+            number = [arrayOfArrayOfLocations[currentCategory] count];
+        }
+        return number;
+        
     }
     
-    return number;
+    return  0;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-        cell.backgroundColor = [UIColor clearColor];
+    if (!inCategories) {
         
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.detailTextLabel.textColor = [UIColor whiteColor];
+        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+            cell.backgroundColor = [UIColor clearColor];
+            
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.detailTextLabel.textColor = [UIColor whiteColor];
+            
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
+            
+            UIView * selectedView = [[UIView alloc] initWithFrame:cell.bounds];
+            selectedView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+            cell.selectedBackgroundView = selectedView;
+            
+        }
         
-        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
-        cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
+        CityLocation * location = arrayOfArrayOfLocations[currentCategory][indexPath.row];
         
-        UIView * selectedView = [[UIView alloc] initWithFrame:cell.bounds];
-        selectedView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-        cell.selectedBackgroundView = selectedView;
-
+        cell.textLabel.text = location.name;
+        cell.detailTextLabel.text = location.address;
+        
+        return cell;
+        
+    } else {
+        
+        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
+            cell.backgroundColor = [UIColor clearColor];
+            
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:30];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            
+            UIView * selectedView = [[UIView alloc] initWithFrame:cell.bounds];
+            selectedView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+            cell.selectedBackgroundView = selectedView;
+        }
+        
+        switch (indexPath.row) {
+                
+            case kRestaurant: {
+                cell.textLabel.text = @"Restaurant";
+                break;
+            }
+                
+            case kBar: {
+                cell.textLabel.text = @"Bar";
+                break;
+            }
+                
+            case kCafe: {
+                cell.textLabel.text = @"Cafe";
+                break;
+            }
+                
+            case kTheater: {
+                cell.textLabel.text = @"Theater";
+                break;
+            }
+                
+            default:
+                break;
+        
+        }
+        
+        return cell;
+        
     }
     
-    CityLocation * location = arrayOfArrayOfLocations[indexPath.section][indexPath.row];
-    
-    cell.textLabel.text = location.name;
-    cell.detailTextLabel.text = location.address;
-    
-    return cell;
+    return nil;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HOAnotationView * annotation = arrayOfArrayOfAnotations[indexPath.section][indexPath.row];
-    [makView selectAnnotation:annotation animated:YES];
-    
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 1500, 1500);
-	[makView setRegion:region animated:YES];
+    if (inCategories) {
+        
+        currentCategory = indexPath.row;
+        inCategories = NO;
+        [cityTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
+        
+    } else {
+        
+        HOAnotationView * annotation = arrayOfArrayOfAnotations[currentCategory][indexPath.row];
+        [makView selectAnnotation:annotation animated:YES];
+        
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 1500, 1500);
+        [makView setRegion:region animated:YES];
+    }
 }
 
 #pragma mark - Map Delegate
@@ -260,14 +316,18 @@
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     
-    for (int section = 0; section < arrayOfArrayOfAnotations.count; section++) {
-        int row = [arrayOfArrayOfAnotations[section] indexOfObject:view.annotation];
-        if (row != NSNotFound) {
-            NSIndexPath * ip = [NSIndexPath indexPathForRow:row inSection:section];
-            [cityTableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-            break;
+    if (!inCategories) {
+        
+        for (int section = 0; section < arrayOfArrayOfAnotations.count; section++) {
+            int row = [arrayOfArrayOfAnotations[currentCategory] indexOfObject:view.annotation];
+            if (row != NSNotFound) {
+                NSIndexPath * ip = [NSIndexPath indexPathForRow:row inSection:section];
+                [cityTableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+                break;
+            }
         }
     }
+
 }
 
 
@@ -275,7 +335,15 @@
 
 - (IBAction)backPressed:(id)sender {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    if  (inCategories) {
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } else {
+        
+        inCategories = YES;
+        [cityTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
+    }
 }
 
 
