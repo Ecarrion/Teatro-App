@@ -145,7 +145,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSNumber * expanded = expandedDictionary[indexPath];
+    NSNumber * expanded = expandedDictionary[indexPath.copy];
 
     if (![expanded boolValue]) {
         return 124;
@@ -227,7 +227,9 @@
         cell.expandButton.hidden = YES;
         cell.dishLabel.text = dish.name;
         NSString * text = dish.description;
-        if ([text length] > MAX_MINIMIZED_CHARACTER_COUNT) {
+        
+        BOOL expanded = [expandedDictionary[indexPath.copy] boolValue];
+        if (!expanded && [text length] > MAX_MINIMIZED_CHARACTER_COUNT) {
             text = [text substringToIndex:MAX_MINIMIZED_CHARACTER_COUNT + 1];
             text = [text stringByAppendingString:@"..."];
             cell.expandButton.hidden = NO;
