@@ -29,5 +29,10 @@
     return self;
 }
 
+- (IBAction)expandButtonPressed:(id)sender {
+    
+    [self.delegate expandButtonPessed:self];
+}
+
 
 @end

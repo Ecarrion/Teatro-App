@@ -11,9 +11,12 @@
 #import "Dish.h"
 #import "Weather.h"
 
-@interface DiningViewController () <UITableViewDataSource, UITableViewDelegate> {
+#define MAX_MINIMIZED_CHARACTER_COUNT 200
+
+@interface DiningViewController () <UITableViewDataSource, UITableViewDelegate, FoodCellDelegate> {
     
     FoodType currentFoodSection;
+    NSMutableDictionary * expandedDictionary;
 }
 
 @property (nonatomic, strong) NSArray * breakfastFishes, * lunchDishes, * diningDishes;
@@ -100,7 +103,7 @@
         }
     }];
     
-    
+    expandedDictionary = [NSMutableDictionary dictionary];
     [foodTableView reloadData];
 }
 
@@ -141,6 +144,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSNumber * expanded = expandedDictionary[indexPath];
+
+    if (![expanded boolValue]) {
+        return 124;
+    }
     
     Dish * dish = nil;
     switch (currentFoodSection) {
@@ -186,6 +195,7 @@
     FoodCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     [cell prepareForReuse];
+    cell.delegate = self;
     cell.backgroundColor = [UIColor clearColor];
     cell.iconView.image = [UIImage imageNamed:[NSString stringWithFormat:@"food%d.png", indexPath.row % 6 + 1]];
     
@@ -214,15 +224,30 @@
     
     if (dish) {
         
+        cell.expandButton.hidden = YES;
         cell.dishLabel.text = dish.name;
-        cell.dishDescriptionLabel.text = [dish.description stringByAppendingFormat:@"  %@ USD", dish.price];
+        NSString * text = dish.description;
+        if ([text length] > MAX_MINIMIZED_CHARACTER_COUNT) {
+            text = [text substringToIndex:MAX_MINIMIZED_CHARACTER_COUNT + 1];
+            text = [text stringByAppendingString:@"..."];
+            cell.expandButton.hidden = NO;
+        }
+        
+        cell.dishDescriptionLabel.text = [text stringByAppendingFormat:@"  %@ USD", dish.price];
         cell.dishDescriptionLabel.frame = CELL_DESCRIPTION_STANDAD_RECT;
         [cell.dishDescriptionLabel sizeToFit];
-        
     }
     
     
     return cell;
+}
+
+-(void)expandButtonPessed:(FoodCell *)cell {
+
+    NSIndexPath * ip = [foodTableView indexPathForCell:cell];
+    expandedDictionary[ip] = @(YES);
+    [foodTableView reloadRowsAtIndexPaths:@[ip] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
 }
 
 

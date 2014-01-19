@@ -15,6 +15,14 @@
 #define CELL_DESCRIPTION_MAX_SIZE CGSizeMake (461, 9999)
 #define CELL_DESCRIPTION_STANDAD_RECT CGRectMake (181, 32, 461, 86)
 
+@class FoodCell;
+
+@protocol FoodCellDelegate <NSObject>
+
+-(void)expandButtonPessed:(FoodCell *)cell;
+
+@end
+
 
 @interface FoodCell : UITableViewCell
 
@@ -22,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *dishLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dishDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *expandButton;
+@property (weak, nonatomic) id <FoodCellDelegate> delegate;
 
 @end
 
