@@ -288,7 +288,7 @@
     
     if (inCategories) {
         
-        currentCategory = indexPath.row;
+        currentCategory = (int)indexPath.row;
         inCategories = NO;
         [cityTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
         

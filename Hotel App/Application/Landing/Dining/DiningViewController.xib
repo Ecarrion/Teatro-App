@@ -45,6 +45,11 @@
                         <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="3Iq-QQ-I1l"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" id="Na3-Ra-mOX">
+                    <rect key="frame" x="-1" y="300" width="376" height="468"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                </view>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="check.png" id="YP4-ov-b3n">
                     <rect key="frame" x="0.0" y="52" width="372" height="248"/>
                     <autoresizingMask key="autoresizingMask"/>
