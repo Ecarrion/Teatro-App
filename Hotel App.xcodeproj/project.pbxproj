@@ -54,6 +54,10 @@
 		2642A9871848580100A830EE /* clock-date-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A9831848580100A830EE /* clock-date-background@2x.png */; };
 		2642A98A18485AEE00A830EE /* buttons-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A98818485AEE00A830EE /* buttons-background.png */; };
 		2642A98B18485AEE00A830EE /* buttons-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2642A98918485AEE00A830EE /* buttons-background@2x.png */; };
+		2661B991189F3F8C007E8A53 /* amenities_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2661B98D189F3F8C007E8A53 /* amenities_background.png */; };
+		2661B992189F3F8C007E8A53 /* amenities_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2661B98E189F3F8C007E8A53 /* amenities_background@2x.png */; };
+		2661B993189F3F8C007E8A53 /* amenities_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 2661B98F189F3F8C007E8A53 /* amenities_title.png */; };
+		2661B994189F3F8C007E8A53 /* amenities_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2661B990189F3F8C007E8A53 /* amenities_title@2x.png */; };
 		267ADA071839BF460053D94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267ADA061839BF460053D94C /* Foundation.framework */; };
 		267ADA091839BF460053D94C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267ADA081839BF460053D94C /* CoreGraphics.framework */; };
 		267ADA0B1839BF460053D94C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267ADA0A1839BF460053D94C /* UIKit.framework */; };
@@ -193,6 +197,10 @@
 		2642A9831848580100A830EE /* clock-date-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-date-background@2x.png"; sourceTree = "<group>"; };
 		2642A98818485AEE00A830EE /* buttons-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttons-background.png"; sourceTree = "<group>"; };
 		2642A98918485AEE00A830EE /* buttons-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttons-background@2x.png"; sourceTree = "<group>"; };
+		2661B98D189F3F8C007E8A53 /* amenities_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenities_background.png; sourceTree = "<group>"; };
+		2661B98E189F3F8C007E8A53 /* amenities_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenities_background@2x.png"; sourceTree = "<group>"; };
+		2661B98F189F3F8C007E8A53 /* amenities_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenities_title.png; sourceTree = "<group>"; };
+		2661B990189F3F8C007E8A53 /* amenities_title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenities_title@2x.png"; sourceTree = "<group>"; };
 		267ADA031839BF460053D94C /* Hotel App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotel App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		267ADA061839BF460053D94C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		267ADA081839BF460053D94C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -609,6 +617,10 @@
 		26A2065D183C757B00568A67 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2661B98D189F3F8C007E8A53 /* amenities_background.png */,
+				2661B98E189F3F8C007E8A53 /* amenities_background@2x.png */,
+				2661B98F189F3F8C007E8A53 /* amenities_title.png */,
+				2661B990189F3F8C007E8A53 /* amenities_title@2x.png */,
 				26416C6D185D1B4C00DBC774 /* right-blurry.png */,
 				26416C6E185D1B4C00DBC774 /* right-blurry@2x.png */,
 				2604F91C1851874200CB5B81 /* check.png */,
@@ -746,6 +758,7 @@
 				26099BA7185E3C7E00105B39 /* raining_icon_small.png in Resources */,
 				268DA540185546670096F376 /* food3.png in Resources */,
 				26099BAD185E3C7E00105B39 /* sunny_icon_small.png in Resources */,
+				2661B992189F3F8C007E8A53 /* amenities_background@2x.png in Resources */,
 				26A20664183C757B00568A67 /* gray-burry.png in Resources */,
 				268DA544185546670096F376 /* food5.png in Resources */,
 				2642A98B18485AEE00A830EE /* buttons-background@2x.png in Resources */,
@@ -754,12 +767,14 @@
 				267ADA3A1839C4130053D94C /* LockscreenViewController.xib in Resources */,
 				26099B9A185E3C7E00105B39 /* sleet_icon@2x.png in Resources */,
 				26099BA4185E3C7E00105B39 /* fog_icon_small@2x.png in Resources */,
+				2661B993189F3F8C007E8A53 /* amenities_title.png in Resources */,
 				2642A9851848580100A830EE /* horizontal-blur@2x.png in Resources */,
 				26099BA8185E3C7E00105B39 /* raining_icon_small@2x.png in Resources */,
 				26F42BEB184D771E003E3791 /* back@2x.png in Resources */,
 				26F42BD9184D6C58003E3791 /* hotel-icon@2x.png in Resources */,
 				26099B9D185E3C7E00105B39 /* sunny_icon.png in Resources */,
 				26099BA3185E3C7E00105B39 /* fog_icon_small.png in Resources */,
+				2661B994189F3F8C007E8A53 /* amenities_title@2x.png in Resources */,
 				26099BA2185E3C7E00105B39 /* cloudy_icon_small@2x.png in Resources */,
 				26099B93185E3C7E00105B39 /* fog_icon.png in Resources */,
 				26C475F71859661600DC99E7 /* dining.json in Resources */,
@@ -816,6 +831,7 @@
 				268DA53C185546670096F376 /* food1.png in Resources */,
 				26F42BD5184D6C58003E3791 /* close_desc_button@2x.png in Resources */,
 				26099B9F185E3C7E00105B39 /* wind_icon.png in Resources */,
+				2661B991189F3F8C007E8A53 /* amenities_background.png in Resources */,
 				26099BA0185E3C7E00105B39 /* wind_icon@2x.png in Resources */,
 				26099B96185E3C7E00105B39 /* partly_cloudy_icon@2x.png in Resources */,
 				267ADA191839BF460053D94C /* Images.xcassets in Resources */,
