@@ -59,7 +59,7 @@
             break;
     }
     
-    NSString * endPoint = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?client_id=5QP2LIEQLOUSYUJILXBOLK5YG3DZFU2N3O1ADFP3VJBRW2V1&client_secret=YEB1ZU2KG41UFHCP2ZQOYVFNHGBZS2CHFL1QFXSDM4PXBMYG&radius=%@&categoryId=%@&q=%@&ll=%f,%f", radius, categoryID, type, HOTEL_LATITUDE, HOTEL_LONGITUDE];
+    NSString * endPoint = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?client_id=5QP2LIEQLOUSYUJILXBOLK5YG3DZFU2N3O1ADFP3VJBRW2V1&client_secret=YEB1ZU2KG41UFHCP2ZQOYVFNHGBZS2CHFL1QFXSDM4PXBMYG&radius=%@&categoryId=%@&q=%@&ll=%f,%f&v=20140202", radius, categoryID, type, HOTEL_LATITUDE, HOTEL_LONGITUDE];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:endPoint parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -67,7 +67,7 @@
         NSMutableArray * locations = [NSMutableArray array];
         NSError * error = nil;
         
-        NSArray * items = responseObject[@"response"][@"groups"][0][@"items"];
+        NSArray * items = responseObject[@"response"][@"venues"];
         [items enumerateObjectsUsingBlock:^(NSDictionary * fqData, NSUInteger idx, BOOL *stop) {
             
             [locations addObject:[[CityLocation alloc] initWithFoursquareData:fqData]];
